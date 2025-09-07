@@ -23,18 +23,18 @@ func _ready():
 		if not InputMap.has_action(action):
 			InputMap.add_action(action)
 	# Binds padrão (A/D, setas, Espaço, J/K)
-	if InputMap.get_action_list("move_left").empty():
-		var ev_left = InputEventKey.new(); ev_left.scancode = KEY_LEFT; InputMap.action_add_event("move_left", ev_left)
-		var ev_a = InputEventKey.new(); ev_a.scancode = KEY_A; InputMap.action_add_event("move_left", ev_a)
-	if InputMap.get_action_list("move_right").empty():
-		var ev_right = InputEventKey.new(); ev_right.scancode = KEY_RIGHT; InputMap.action_add_event("move_right", ev_right)
-		var ev_d = InputEventKey.new(); ev_d.scancode = KEY_D; InputMap.action_add_event("move_right", ev_d)
-	if InputMap.get_action_list("jump").empty():
-		var ev_space = InputEventKey.new(); ev_space.scancode = KEY_SPACE; InputMap.action_add_event("jump", ev_space)
-	if InputMap.get_action_list("attack").empty():
-		var ev_j = InputEventKey.new(); ev_j.scancode = KEY_J; InputMap.action_add_event("attack", ev_j)
-	if InputMap.get_action_list("attack2").empty():
-		var ev_k = InputEventKey.new(); ev_k.scancode = KEY_K; InputMap.action_add_event("attack2", ev_k)
+	if InputMap.action_get_events("move_left").is_empty():
+		var ev_left = InputEventKey.new(); ev_left.keycode = KEY_LEFT; InputMap.action_add_event("move_left", ev_left)
+		var ev_a = InputEventKey.new(); ev_a.keycode = KEY_A; InputMap.action_add_event("move_left", ev_a)
+	if InputMap.action_get_events("move_right").is_empty():
+		var ev_right = InputEventKey.new(); ev_right.keycode = KEY_RIGHT; InputMap.action_add_event("move_right", ev_right)
+		var ev_d = InputEventKey.new(); ev_d.keycode = KEY_D; InputMap.action_add_event("move_right", ev_d)
+	if InputMap.action_get_events("jump").is_empty():
+		var ev_space = InputEventKey.new(); ev_space.keycode = KEY_SPACE; InputMap.action_add_event("jump", ev_space)
+	if InputMap.action_get_events("attack").is_empty():
+		var ev_j = InputEventKey.new(); ev_j.keycode = KEY_J; InputMap.action_add_event("attack", ev_j)
+	if InputMap.action_get_events("attack2").is_empty():
+		var ev_k = InputEventKey.new(); ev_k.keycode = KEY_K; InputMap.action_add_event("attack2", ev_k)
 
 	# Animação inicial
 	if animated_sprite:
