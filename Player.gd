@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 # --- Constantes ---
 const SPEED = 250.0
@@ -8,13 +8,12 @@ const UP_DIRECTION = Vector2.UP
 
 # --- Variáveis ---
 # Gravidade (pode usar a do projeto ou um valor fixo)
-var gravity = 980  # aproximadamente 9,8 * 100 pixels/s²
+var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
-var velocity = Vector2()
 var can_double_jump = true
 
 # Nó de animação no Godot 3 é AnimatedSprite
-onready var animated_sprite = $AnimatedSprite
+@onready var animated_sprite = $AnimatedSprite
 
 
 func _ready():
@@ -49,8 +48,8 @@ func _physics_process(delta):
 	else:
 		can_double_jump = true
 
-	# Movimento horizontal (Godot 3 não tem Input.get_axis)
-	var direction = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
+	# Movimento horizontal (Godot 4 tem Input.get_axis)
+	var direction = Input.get_axis("move_left", "move_right")
 	if direction != 0:
 		velocity.x = direction * SPEED
 		animated_sprite.flip_h = direction < 0
@@ -82,5 +81,5 @@ func _physics_process(delta):
 		else:
 			animated_sprite.play("idle")
 
-	# Aplicar movimento
-	velocity = move_and_slide(velocity, UP_DIRECTION)
+	# Aplicar movimento (Godot 4 usa move_and_slide() sem parâmetros)
+	move_and_slide()
