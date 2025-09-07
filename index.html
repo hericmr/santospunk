@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SantosPunk - Cyberpunk Platformer</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0a0a0a, #1a1a2e, #16213e);
+            font-family: 'Courier New', monospace;
+            color: #00ff00;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        
+        .game-container {
+            position: relative;
+            border: 2px solid #00ff00;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #00ff00, inset 0 0 20px rgba(0, 255, 0, 0.1);
+            background: #000;
+        }
+        
+        .title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            text-shadow: 0 0 10px #00ff00;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #00ff00; }
+            to { text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00; }
+        }
+        
+        .controls {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #00ffff;
+        }
+        
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #00ff00;
+            font-size: 1.5em;
+            z-index: 1000;
+        }
+        
+        .cyber-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 255, 0, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 0, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #00ff00;
+            border-radius: 50%;
+            animation: float 6s infinite linear;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(100vh) translateX(0); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-10vh) translateX(100px); opacity: 0; }
+        }
+        
+        .game-frame {
+            width: 1024px;
+            height: 768px;
+            border: none;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cyber-grid"></div>
+    <div class="particles" id="particles"></div>
+    
+    <h1 class="title">SANTOS PUNK</h1>
+    <div class="game-container">
+        <div class="loading" id="loading">INICIALIZANDO SISTEMA...</div>
+        <iframe id="game-frame" class="game-frame" src="web/firstgame.html" style="display: none;"></iframe>
+    </div>
+    
+    <div class="controls">
+        <p>🎮 CONTROLES:</p>
+        <p>A/D ou ←/→ - Mover | ESPAÇO - Pular | J/K - Ataques</p>
+        <p>🌐 <a href="https://github.com/hericmr/santospunk" style="color: #00ffff;">GitHub Repository</a></p>
+    </div>
+
+    <script>
+        // Criar partículas cyberpunk
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 6 + 's';
+                particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        // Simular carregamento do jogo
+        function simulateLoading() {
+            const loading = document.getElementById('loading');
+            const gameFrame = document.getElementById('game-frame');
+            
+            setTimeout(() => {
+                loading.textContent = "CARREGANDO ASSETS...";
+            }, 1000);
+            
+            setTimeout(() => {
+                loading.textContent = "INICIALIZANDO FÍSICA...";
+            }, 2000);
+            
+            setTimeout(() => {
+                loading.textContent = "CONECTANDO AO MATRIX...";
+            }, 3000);
+            
+            setTimeout(() => {
+                loading.style.display = 'none';
+                gameFrame.style.display = 'block';
+            }, 4000);
+        }
+        
+        // Inicializar
+        createParticles();
+        simulateLoading();
+    </script>
+</body>
+</html>
