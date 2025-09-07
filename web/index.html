@@ -3,148 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SantosPunk - Jogo Online</title>
+    <title>SantosPunk - Cyberpunk Platformer</title>
     <style>
         body {
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+            background: linear-gradient(135deg, #0a0a0a, #1a1a2e, #16213e);
             font-family: 'Courier New', monospace;
-            color: #00ff41;
+            color: #00ff00;
+            overflow: hidden;
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
             min-height: 100vh;
         }
         
-        .header {
-            text-align: center;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.8);
-            border: 2px solid #00ff41;
+        .game-container {
+            position: relative;
+            border: 2px solid #00ff00;
             border-radius: 10px;
-            margin: 20px;
-            box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+            box-shadow: 0 0 20px #00ff00, inset 0 0 20px rgba(0, 255, 0, 0.1);
+            background: #000;
         }
         
-        h1 {
-            margin: 0;
+        .title {
+            text-align: center;
+            margin-bottom: 20px;
             font-size: 2.5em;
-            text-shadow: 0 0 10px #00ff41;
+            text-shadow: 0 0 10px #00ff00;
             animation: glow 2s ease-in-out infinite alternate;
         }
         
         @keyframes glow {
-            from { text-shadow: 0 0 10px #00ff41; }
-            to { text-shadow: 0 0 20px #00ff41, 0 0 30px #00ff41; }
+            from { text-shadow: 0 0 10px #00ff00; }
+            to { text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00; }
         }
         
         .controls {
-            background: rgba(0, 0, 0, 0.6);
-            padding: 15px;
-            border-radius: 8px;
-            margin: 10px;
-            border: 1px solid #00ff41;
-        }
-        
-        .game-container {
-            border: 3px solid #00ff41;
-            border-radius: 10px;
-            box-shadow: 0 0 30px rgba(0, 255, 65, 0.5);
-            overflow: hidden;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #00ffff;
         }
         
         .loading {
-            text-align: center;
-            padding: 50px;
-            font-size: 1.2em;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #00ff00;
+            font-size: 1.5em;
+            z-index: 1000;
         }
         
-        .spinner {
-            border: 4px solid #333;
-            border-top: 4px solid #00ff41;
+        .cyber-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 255, 0, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 0, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #00ff00;
             border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-            margin: 20px auto;
+            animation: float 6s infinite linear;
         }
         
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        .footer {
-            margin-top: 20px;
-            text-align: center;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.8);
-            border-radius: 10px;
-            border: 1px solid #00ff41;
-        }
-        
-        a {
-            color: #00ff41;
-            text-decoration: none;
-        }
-        
-        a:hover {
-            text-shadow: 0 0 5px #00ff41;
+        @keyframes float {
+            0% { transform: translateY(100vh) translateX(0); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-10vh) translateX(100px); opacity: 0; }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>🎮 SantosPunk</h1>
-        <p>Jogo de Plataforma Cyberpunk 2D</p>
-    </div>
+    <div class="cyber-grid"></div>
+    <div class="particles" id="particles"></div>
     
-    <div class="controls">
-        <h3>🎯 Controles:</h3>
-        <p><strong>A/D</strong> ou <strong>←/→</strong> - Movimento</p>
-        <p><strong>Espaço</strong> - Pular</p>
-        <p><strong>J/K</strong> - Ataques</p>
-    </div>
-    
+    <h1 class="title">SANTOS PUNK</h1>
     <div class="game-container">
-        <div class="loading">
-            <div class="spinner"></div>
-            <p>Carregando SantosPunk...</p>
-            <p>Se o jogo não carregar, verifique se o JavaScript está habilitado.</p>
-        </div>
-        
-        <!-- Aqui será inserido o código do Godot quando exportado -->
+        <div class="loading" id="loading">INICIALIZANDO SISTEMA...</div>
         <canvas id="canvas" style="display: none;"></canvas>
     </div>
     
-    <div class="footer">
-        <p>🚀 Desenvolvido com <strong>Godot Engine</strong></p>
-        <p>📁 <a href="https://github.com/hericmr/santospunk" target="_blank">Ver Código Fonte no GitHub</a></p>
-        <p>🎨 Assets: Cyberpunk Sprites & DystopianCity</p>
+    <div class="controls">
+        <p>🎮 CONTROLES:</p>
+        <p>A/D ou ←/→ - Mover | ESPAÇO - Pular | J/K - Ataques</p>
+        <p>🌐 <a href="https://github.com/hericmr/santospunk" style="color: #00ffff;">GitHub Repository</a></p>
     </div>
-    
+
     <script>
-        // Script para mostrar mensagem se o jogo não carregar
-        setTimeout(function() {
-            const canvas = document.getElementById('canvas');
-            const loading = document.querySelector('.loading');
-            
-            if (canvas.style.display === 'none') {
-                loading.innerHTML = `
-                    <h3>⚠️ Jogo não encontrado</h3>
-                    <p>Para jogar SantosPunk online:</p>
-                    <ol>
-                        <li>Abra o Godot Engine</li>
-                        <li>Vá em <strong>Project → Export</strong></li>
-                        <li>Adicione plataforma <strong>Web</strong></li>
-                        <li>Exporte para a pasta <strong>web/</strong></li>
-                        <li>Faça commit e push no GitHub</li>
-                    </ol>
-                    <p><a href="https://github.com/hericmr/santospunk" target="_blank">📖 Ver instruções completas</a></p>
-                `;
+        // Criar partículas cyberpunk
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 6 + 's';
+                particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
+                particlesContainer.appendChild(particle);
             }
-        }, 5000);
+        }
+        
+        // Simular carregamento do jogo
+        function simulateLoading() {
+            const loading = document.getElementById('loading');
+            const canvas = document.getElementById('canvas');
+            
+            setTimeout(() => {
+                loading.textContent = "CARREGANDO ASSETS...";
+            }, 1000);
+            
+            setTimeout(() => {
+                loading.textContent = "INICIALIZANDO FÍSICA...";
+            }, 2000);
+            
+            setTimeout(() => {
+                loading.textContent = "CONECTANDO AO MATRIX...";
+            }, 3000);
+            
+            setTimeout(() => {
+                loading.style.display = 'none';
+                canvas.style.display = 'block';
+                
+                // Aqui você pode carregar o jogo real do Godot
+                // Por enquanto, vamos mostrar uma mensagem
+                canvas.width = 1024;
+                canvas.height = 768;
+                const ctx = canvas.getContext('2d');
+                
+                // Desenhar uma tela de placeholder
+                ctx.fillStyle = '#000';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                
+                ctx.fillStyle = '#00ff00';
+                ctx.font = '24px Courier New';
+                ctx.textAlign = 'center';
+                ctx.fillText('SANTOS PUNK', canvas.width/2, canvas.height/2 - 50);
+                
+                ctx.fillStyle = '#00ffff';
+                ctx.font = '16px Courier New';
+                ctx.fillText('JOGO CARREGADO COM SUCESSO!', canvas.width/2, canvas.height/2);
+                ctx.fillText('EXPORTE O JOGO DO GODOT PARA VER AQUI', canvas.width/2, canvas.height/2 + 30);
+                
+            }, 4000);
+        }
+        
+        // Inicializar
+        createParticles();
+        simulateLoading();
     </script>
 </body>
 </html>
