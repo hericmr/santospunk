@@ -72,7 +72,7 @@ func _physics_process(delta):
 	if not animated_sprite.animation.begins_with("attack"):
 		if not is_on_floor():
 			# No ar - usar animação de queda se existir, senão manter idle
-			if "fall" in animated_sprite.frames.get_animation_names():
+			if animated_sprite.sprite_frames and "fall" in animated_sprite.sprite_frames.get_animation_names():
 				animated_sprite.play("fall")
 			else:
 				animated_sprite.play("idle")
