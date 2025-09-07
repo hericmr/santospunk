@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SantosPunk - Demo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+            font-family: 'Courier New', monospace;
+            color: #00ff41;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid #00ff41;
+            border-radius: 10px;
+            margin: 20px;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-shadow: 0 0 10px #00ff41;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #00ff41; }
+            to { text-shadow: 0 0 20px #00ff41, 0 0 30px #00ff41; }
+        }
+        
+        .game-container {
+            border: 3px solid #00ff41;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(0, 255, 65, 0.5);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        canvas {
+            display: block;
+            background: #0a0a0a;
+        }
+        
+        .controls {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px;
+            border: 1px solid #00ff41;
+        }
+        
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            border: 1px solid #00ff41;
+        }
+        
+        a {
+            color: #00ff41;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-shadow: 0 0 5px #00ff41;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎮 SantosPunk - Demo</h1>
+        <p>Versão Demo HTML5 Canvas</p>
+    </div>
+    
+    <div class="controls">
+        <h3>🎯 Controles:</h3>
+        <p><strong>A/D</strong> ou <strong>←/→</strong> - Movimento</p>
+        <p><strong>Espaço</strong> - Pular</p>
+        <p><strong>J/K</strong> - Ataques</p>
+    </div>
+    
+    <div class="game-container">
+        <canvas id="gameCanvas" width="1024" height="768"></canvas>
+    </div>
+    
+    <div class="footer">
+        <p>🚀 Demo desenvolvida em HTML5 Canvas</p>
+        <p>📁 <a href="https://github.com/hericmr/santospunk" target="_blank">Ver Código Fonte Completo no GitHub</a></p>
+        <p>🎮 <a href="index.html">Versão Godot (quando disponível)</a></p>
+    </div>
+    
+    <script>
+        // SantosPunk Demo - HTML5 Canvas
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Game state
+        const game = {
+            player: {
+                x: 100,
+                y: 400,
+                width: 40,
+                height: 60,
+                velocityX: 0,
+                velocityY: 0,
+                speed: 5,
+                jumpPower: -15,
+                onGround: false,
+                color: '#00ff41'
+            },
+            gravity: 0.8,
+            keys: {},
+            particles: [],
+            background: '#0a0a0a'
+        };
+        
+        // Input handling
+        document.addEventListener('keydown', (e) => {
+            game.keys[e.key.toLowerCase()] = true;
+            game.keys[e.code] = true;
+        });
+        
+        document.addEventListener('keyup', (e) => {
+            game.keys[e.key.toLowerCase()] = false;
+            game.keys[e.code] = false;
+        });
+        
+        // Game loop
+        function gameLoop() {
+            update();
+            render();
+            requestAnimationFrame(gameLoop);
+        }
+        
+        function update() {
+            const p = game.player;
+            
+            // Horizontal movement
+            if (game.keys['a'] || game.keys['arrowleft']) {
+                p.velocityX = -p.speed;
+            } else if (game.keys['d'] || game.keys['arrowright']) {
+                p.velocityX = p.speed;
+            } else {
+                p.velocityX *= 0.8; // Friction
+            }
+            
+            // Jumping
+            if ((game.keys[' '] || game.keys['space']) && p.onGround) {
+                p.velocityY = p.jumpPower;
+                p.onGround = false;
+                createJumpParticles();
+            }
+            
+            // Apply gravity
+            p.velocityY += game.gravity;
+            
+            // Update position
+            p.x += p.velocityX;
+            p.y += p.velocityY;
+            
+            // Ground collision
+            if (p.y + p.height >= canvas.height - 100) {
+                p.y = canvas.height - 100 - p.height;
+                p.velocityY = 0;
+                p.onGround = true;
+            }
+            
+            // Screen boundaries
+            if (p.x < 0) p.x = 0;
+            if (p.x + p.width > canvas.width) p.x = canvas.width - p.width;
+            
+            // Update particles
+            game.particles = game.particles.filter(particle => {
+                particle.x += particle.vx;
+                particle.y += particle.vy;
+                particle.life--;
+                particle.vy += 0.2;
+                return particle.life > 0;
+            });
+        }
+        
+        function render() {
+            // Clear canvas
+            ctx.fillStyle = game.background;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Draw cyberpunk grid background
+            ctx.strokeStyle = '#001100';
+            ctx.lineWidth = 1;
+            for (let x = 0; x < canvas.width; x += 50) {
+                ctx.beginPath();
+                ctx.moveTo(x, 0);
+                ctx.lineTo(x, canvas.height);
+                ctx.stroke();
+            }
+            for (let y = 0; y < canvas.height; y += 50) {
+                ctx.beginPath();
+                ctx.moveTo(0, y);
+                ctx.lineTo(canvas.width, y);
+                ctx.stroke();
+            }
+            
+            // Draw ground
+            ctx.fillStyle = '#002200';
+            ctx.fillRect(0, canvas.height - 100, canvas.width, 100);
+            
+            // Draw player
+            ctx.fillStyle = game.player.color;
+            ctx.fillRect(game.player.x, game.player.y, game.player.width, game.player.height);
+            
+            // Draw player details
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(game.player.x + 10, game.player.y + 10, 8, 8); // Eyes
+            ctx.fillRect(game.player.x + 22, game.player.y + 10, 8, 8);
+            
+            // Draw particles
+            game.particles.forEach(particle => {
+                ctx.fillStyle = `rgba(0, 255, 65, ${particle.life / 30})`;
+                ctx.fillRect(particle.x, particle.y, 4, 4);
+            });
+            
+            // Draw UI
+            ctx.fillStyle = '#00ff41';
+            ctx.font = '20px Courier New';
+            ctx.fillText('SantosPunk Demo', 20, 40);
+            ctx.font = '14px Courier New';
+            ctx.fillText('FPS: ' + Math.round(1000 / (performance.now() - (game.lastTime || 0))), 20, 60);
+            game.lastTime = performance.now();
+        }
+        
+        function createJumpParticles() {
+            for (let i = 0; i < 5; i++) {
+                game.particles.push({
+                    x: game.player.x + game.player.width / 2,
+                    y: game.player.y + game.player.height,
+                    vx: (Math.random() - 0.5) * 4,
+                    vy: -Math.random() * 3,
+                    life: 30
+                });
+            }
+        }
+        
+        // Start game
+        gameLoop();
+        
+        // Add some cyberpunk atmosphere
+        setInterval(() => {
+            if (Math.random() < 0.1) {
+                game.particles.push({
+                    x: Math.random() * canvas.width,
+                    y: canvas.height,
+                    vx: (Math.random() - 0.5) * 2,
+                    vy: -Math.random() * 2,
+                    life: 60
+                });
+            }
+        }, 100);
+    </script>
+</body>
+</html>
