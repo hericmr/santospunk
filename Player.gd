@@ -55,7 +55,7 @@ func _physics_process(delta):
 		animated_sprite.flip_h = direction < 0
 	else:
 		# Desaceleração suave
-		velocity.x = lerp(velocity.x, 0, 0.2)
+		velocity.x = lerp(velocity.x, 0.0, 0.2)
 
 	# Pulo simples (sem pulo duplo temporariamente)
 	if Input.is_action_just_pressed("jump"):
