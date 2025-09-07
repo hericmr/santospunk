@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ho7vyhcgo08f" path="res://assets/DystopianCity/PNG/4.png" id="4"]
 
 [sub_resource type="RectangleShape2D" id="1"]
-size = Vector2(1341, 64)
+size = Vector2(1420.5, 64)
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_sb48q"]
 particle_flag_disable_z = true
@@ -29,7 +29,7 @@ position = Vector2(513, 287)
 modulate = Color(0.917647, 0.054902, 0.054902, 1)
 self_modulate = Color(0, 0, 0, 1)
 light_mask = 31
-position = Vector2(583.5, 584)
+position = Vector2(534.25, 610)
 shape = SubResource("1")
 
 [node name="0" type="Sprite2D" parent="StaticBody2D/CollisionShape2D"]
@@ -46,8 +46,8 @@ position = Vector2(64, 500)
 scale = Vector2(1, 1.08333)
 
 [node name="4" type="Sprite2D" parent="."]
-position = Vector2(515, 587.25)
-scale = Vector2(1.71812, 0.734376)
+position = Vector2(0, -1)
+scale = Vector2(2.14597, 0.734376)
 texture = ExtResource("4")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
