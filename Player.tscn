@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://bdr1ihfd5myym" path="res://assets/Free 3 Cyberpunk Sprites Pixel Art/2 Punk/heric_punk.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://cmj06k2ajlq4i" path="res://assets/Free 3 Cyberpunk Sprites Pixel Art/2 Punk/heric_run.png" id="2"]
-[ext_resource type="Texture2D" uid="uid://b02gj7hpc6rer" path="res://assets/Free 3 Cyberpunk Sprites Pixel Art/2 Punk/Punk_doublejump.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://bxcisuyklwhdw" path="res://assets/Free 3 Cyberpunk Sprites Pixel Art/2 Punk/Punk_attack1.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://ds8ks3lj66lme" path="res://assets/heric_doublejump-1.png" id="4_tdg3f"]
 [ext_resource type="Texture2D" uid="uid://dh6a4x2eyofyj" path="res://assets/Free 3 Cyberpunk Sprites Pixel Art/2 Punk/Punk_attack2.png" id="5"]
 [ext_resource type="Script" uid="uid://b7ifpmy6odu25" path="res://Player.gd" id="6"]
 
@@ -63,28 +63,28 @@ region = Rect2(288, 0, 48, 48)
 atlas = ExtResource("5")
 region = Rect2(336, 0, 48, 48)
 
-[sub_resource type="AtlasTexture" id="12"]
-atlas = ExtResource("3")
+[sub_resource type="AtlasTexture" id="AtlasTexture_dtqjt"]
+atlas = ExtResource("4_tdg3f")
 region = Rect2(0, 0, 48, 48)
 
-[sub_resource type="AtlasTexture" id="13"]
-atlas = ExtResource("3")
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ncpa"]
+atlas = ExtResource("4_tdg3f")
 region = Rect2(48, 0, 48, 48)
 
-[sub_resource type="AtlasTexture" id="14"]
-atlas = ExtResource("3")
+[sub_resource type="AtlasTexture" id="AtlasTexture_wi0c6"]
+atlas = ExtResource("4_tdg3f")
 region = Rect2(96, 0, 48, 48)
 
-[sub_resource type="AtlasTexture" id="15"]
-atlas = ExtResource("3")
+[sub_resource type="AtlasTexture" id="AtlasTexture_hp6x6"]
+atlas = ExtResource("4_tdg3f")
 region = Rect2(144, 0, 48, 48)
 
-[sub_resource type="AtlasTexture" id="16"]
-atlas = ExtResource("3")
+[sub_resource type="AtlasTexture" id="AtlasTexture_3tkgg"]
+atlas = ExtResource("4_tdg3f")
 region = Rect2(192, 0, 48, 48)
 
-[sub_resource type="AtlasTexture" id="17"]
-atlas = ExtResource("3")
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6ohk"]
+atlas = ExtResource("4_tdg3f")
 region = Rect2(240, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="37"]
@@ -183,22 +183,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("12")
+"texture": SubResource("AtlasTexture_dtqjt")
 }, {
 "duration": 1.0,
-"texture": SubResource("13")
+"texture": SubResource("AtlasTexture_5ncpa")
 }, {
 "duration": 1.0,
-"texture": SubResource("14")
+"texture": SubResource("AtlasTexture_wi0c6")
 }, {
 "duration": 1.0,
-"texture": SubResource("15")
+"texture": SubResource("AtlasTexture_hp6x6")
 }, {
 "duration": 1.0,
-"texture": SubResource("16")
+"texture": SubResource("AtlasTexture_3tkgg")
 }, {
 "duration": 1.0,
-"texture": SubResource("17")
+"texture": SubResource("AtlasTexture_l6ohk")
 }],
 "loop": true,
 "name": &"doublejump",
@@ -256,7 +256,7 @@ light_mask = 0
 position = Vector2(23, -57)
 scale = Vector2(2.21419, 2.41553)
 sprite_frames = SubResource("5")
-animation = &"idle"
+animation = &"doublejump"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -11)
