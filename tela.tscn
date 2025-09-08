@@ -1,0 +1,86 @@
+[gd_scene load_steps=12 format=3 uid="uid://1p3l0jjpovv5"]
+
+[ext_resource type="Texture2D" uid="uid://b1q4mm1wct6u0" path="res://assets/tiaana.png" id="1_0e48y"]
+[ext_resource type="Script" uid="uid://c16l0eya2f3b8" path="res://tela.gd" id="1_hlxoe"]
+[ext_resource type="Texture2D" uid="uid://dxjhoq13oidcs" path="res://assets/Free Industrial Zone Tileset(1)/4 Animated objects/Screen1.png" id="2_epypp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0x5m"]
+atlas = ExtResource("1_0e48y")
+region = Rect2(0, 0, 200, 94)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3mrqo"]
+atlas = ExtResource("1_0e48y")
+region = Rect2(0, 94, 200, 94)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0hol4"]
+atlas = ExtResource("2_epypp")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6r6c"]
+atlas = ExtResource("2_epypp")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kdubu"]
+atlas = ExtResource("2_epypp")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d21ai"]
+atlas = ExtResource("2_epypp")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rj586"]
+animations = [{
+"frames": [{
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_r0x5m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3mrqo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0hol4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6r6c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kdubu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d21ai")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation_1",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4d7sh"]
+size = Vector2(21.1651, 14.8402)
+
+[node name="televisao" type="Node2D"]
+script = ExtResource("1_hlxoe")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(382, 111)
+scale = Vector2(2.50781, 2.62799)
+sprite_frames = SubResource("SpriteFrames_rj586")
+animation = &"new_animation"
+frame_progress = 0.789827
+speed_scale = 0.675
+
+[node name="Area2D" type="Area2D" parent="AnimatedSprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D"]
+position = Vector2(-0.58255, 0.951305)
+skew = -0.221657
+shape = SubResource("RectangleShape2D_4d7sh")
