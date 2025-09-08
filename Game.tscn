@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b4fvjg6heglmq"]
+[gd_scene load_steps=14 format=3 uid="uid://b4fvjg6heglmq"]
 
 [ext_resource type="Texture2D" uid="uid://cp63h017mg0r1" path="res://assets/unnamed.png" id="1"]
 [ext_resource type="PackedScene" uid="uid://c0ybmjtnpdr1a" path="res://Player.tscn" id="2"]
@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://cwxxh6i1p06pr" path="res://assets/DystopianCity/PNG/1.png" id="8_yhmtn"]
 [ext_resource type="Texture2D" uid="uid://ho7vyhcgo08f" path="res://assets/DystopianCity/PNG/4.png" id="9_gwjdr"]
 [ext_resource type="Texture2D" uid="uid://dr2w2hxbsbde4" path="res://assets/glitch_overlay.png" id="11_lvtmh"]
-[ext_resource type="Texture2D" uid="uid://dy8qljcm7yfbu" path="res://assets/lion2 copy.png" id="12_yyih5"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(2482, 13)
@@ -129,7 +128,7 @@ scale = Vector2(1.15177, 0.92378)
 texture = ExtResource("8_yhmtn")
 
 [node name="0" type="Sprite2D" parent="."]
-position = Vector2(-930, 239)
+position = Vector2(-936, 233)
 scale = Vector2(3.14933, 4.30715)
 texture = ExtResource("3")
 
@@ -147,8 +146,3 @@ texture = ExtResource("9_gwjdr")
 position = Vector2(2011, 122)
 scale = Vector2(3.2026, 5.13654)
 texture = ExtResource("3")
-
-[node name="Lion2Copy" type="Sprite2D" parent="."]
-position = Vector2(-1278, 1300)
-scale = Vector2(0.207143, 0.19218)
-texture = ExtResource("12_yyih5")
