@@ -21,15 +21,6 @@ position = Vector2(2.00001, -242)
 scale = Vector2(1.28104, 0.947977)
 texture = ExtResource("1")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(0.999992, 0)
-scale = Vector2(1.10851, 1.22073)
-zoom = Vector2(0.88, 0.99)
-drag_vertical_offset = -1.0
-drag_left_margin = 0.6
-drag_top_margin = 0.58
-drag_bottom_margin = 0.74
-
 [node name="poster" parent="." instance=ExtResource("4_t88pq")]
 position = Vector2(-557, -96)
 scale = Vector2(0.049, 0.049)
@@ -37,6 +28,14 @@ scale = Vector2(0.049, 0.049)
 [node name="Player" parent="." instance=ExtResource("2")]
 position = Vector2(0.999992, 0)
 scale = Vector2(1.10851, 1.22073)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(0.88, 0.99)
+position_smoothing_enabled = true
+drag_vertical_offset = -1.0
+drag_left_margin = 0.6
+drag_top_margin = 0.58
+drag_bottom_margin = 0.74
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
