@@ -253,12 +253,12 @@ script = ExtResource("6")
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
 light_mask = 0
-position = Vector2(30, -80)
-scale = Vector2(3.13542, 3.30208)
+position = Vector2(34, -96)
+scale = Vector2(3.75521, 3.95482)
 sprite_frames = SubResource("5")
 animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, -19)
+position = Vector2(-1, -20)
 scale = Vector2(2.4375, 2.4375)
 shape = SubResource("36")
