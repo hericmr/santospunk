@@ -1,8 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+		<meta name="screen-orientation" content="landscape">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-orientations" content="landscape">
 		<title>firstgame</title>
 		<style>
 html, body, #canvas {
@@ -16,6 +21,20 @@ body {
 	background-color: black;
 	overflow: hidden;
 	touch-action: none;
+}
+
+/* Força orientação landscape no mobile */
+@media screen and (orientation: portrait) {
+	body {
+		transform: rotate(90deg);
+		transform-origin: left top;
+		width: 100vh;
+		height: 100vw;
+		overflow-x: hidden;
+		position: absolute;
+		top: 100%;
+		left: 0;
+	}
 }
 
 #canvas {
@@ -103,15 +122,40 @@ here we go
 			Your browser does not support JavaScript.
 		</noscript>
 
+		<div id="orientation-message" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.8); color: white; padding: 20px; border-radius: 10px; text-align: center; z-index: 1000;">
+			<p>🔄 Gire seu dispositivo para o modo horizontal para jogar!</p>
+		</div>
+
 		<div id="status">
 			<img id="status-splash" class="show-image--true fullsize--true use-filter--true" src="index.png" alt="">
 			<progress id="status-progress"></progress>
 			<div id="status-notice"></div>
 		</div>
 
+		<script>
+		// Detectar orientação e mostrar mensagem se necessário
+		function checkOrientation() {
+			const orientationMessage = document.getElementById('orientation-message');
+			const isMobile = window.innerWidth <= 768;
+			
+			if (isMobile && window.innerHeight > window.innerWidth) {
+				orientationMessage.style.display = 'block';
+			} else {
+				orientationMessage.style.display = 'none';
+			}
+		}
+		
+		// Verificar orientação ao carregar e redimensionar
+		window.addEventListener('load', checkOrientation);
+		window.addEventListener('resize', checkOrientation);
+		window.addEventListener('orientationchange', function() {
+			setTimeout(checkOrientation, 100);
+		});
+		</script>
+		
 		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":26465456,"index.wasm":52126319},"focusCanvas":true,"gdextensionLibs":[]};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":26465376,"index.wasm":52126319},"focusCanvas":true,"gdextensionLibs":[]};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
