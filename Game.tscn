@@ -43,7 +43,7 @@ position = Vector2(-204, -165)
 texture = ExtResource("3")
 
 [node name="Unnamed" type="Sprite2D" parent="."]
-position = Vector2(557, 248)
+position = Vector2(481, 245)
 scale = Vector2(1.84875, 1.80407)
 texture = ExtResource("1")
 
@@ -63,13 +63,13 @@ autoplay = true
 
 [node name="Barrel2" type="Sprite2D" parent="."]
 physics_interpolation_mode = 1
-position = Vector2(1421, 695)
+position = Vector2(1331, 692)
 scale = Vector2(3.77778, 2.71154)
 texture = ExtResource("5_t88pq")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
-position = Vector2(518, -57)
-scale = Vector2(1.49261, 1.49261)
+position = Vector2(487, 5.76)
+scale = Vector2(1.613, 1.963)
 amount = 900
 visibility_rect = Rect2(0, 0, 0, 0)
 process_material = SubResource("ParticleProcessMaterial_sb48q")
