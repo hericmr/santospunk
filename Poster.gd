@@ -59,9 +59,9 @@ func _show_indicator():
 		_indicator_label = Label.new()
 		_indicator_label.text = "!"
 		_indicator_label.add_theme_color_override("font_color", Color(1, 1, 0))
-		_indicator_label.add_theme_font_size_override("font_size", 32)
+		_indicator_label.add_theme_font_size_override("font_size", 52)
 		_player_ref.add_child(_indicator_label)
-		_indicator_label.position = Vector2(0, -40)
+		_indicator_label.position = Vector2(0, -140)
 
 func _hide_indicator():
 	if _indicator_label and is_instance_valid(_indicator_label):
