@@ -30,12 +30,14 @@ position = Vector2(0.999992, 0)
 scale = Vector2(1.10851, 1.22073)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(0.88, 0.99)
+zoom = Vector2(0.635, 0.68)
 position_smoothing_enabled = true
+position_smoothing_speed = 4.0
 drag_vertical_offset = -1.0
-drag_left_margin = 0.6
-drag_top_margin = 0.58
-drag_bottom_margin = 0.74
+drag_left_margin = 0.4
+drag_top_margin = 0.7
+drag_right_margin = 0.23
+drag_bottom_margin = 1.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
