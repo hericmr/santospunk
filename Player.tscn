@@ -246,19 +246,19 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tdg3f"]
-size = Vector2(6.48113, 27.4495)
+size = Vector2(6.67175, 27.0683)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("6")
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
 light_mask = 0
-position = Vector2(23, -57)
-scale = Vector2(2.21419, 2.41553)
+position = Vector2(23, -51)
+scale = Vector2(1.94043, 2.11687)
 sprite_frames = SubResource("5")
 animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1.5, -38)
+position = Vector2(4.25, -38.5)
 scale = Vector2(2.623, 2.623)
 shape = SubResource("RectangleShape2D_tdg3f")
