@@ -1,10 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://b4fvjg6heglmq"]
+[gd_scene load_steps=9 format=3 uid="uid://b4fvjg6heglmq"]
 
 [ext_resource type="Texture2D" uid="uid://cp63h017mg0r1" path="res://assets/unnamed.png" id="1"]
 [ext_resource type="PackedScene" uid="uid://c0ybmjtnpdr1a" path="res://Player.tscn" id="2"]
 [ext_resource type="AudioStream" uid="uid://dcn0p2s53uljm" path="res://assets/eletronic.ogg" id="4_sb48q"]
 [ext_resource type="PackedScene" uid="uid://dokwajyxd77a4" path="res://Poster.tscn" id="4_t88pq"]
-[ext_resource type="Texture2D" uid="uid://b1q4mm1wct6u0" path="res://assets/tiaana.png" id="5_t88pq"]
+[ext_resource type="PackedScene" uid="uid://1p3l0jjpovv5" path="res://tela.tscn" id="5_t88pq"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(3409, 99)
@@ -15,48 +15,11 @@ size = Vector2(3409, 99)
 custom_solver_bias = 0.23
 size = Vector2(183.589, 574)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_r0x5m"]
-atlas = ExtResource("5_t88pq")
-region = Rect2(0, 0, 200, 94)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3mrqo"]
-atlas = ExtResource("5_t88pq")
-region = Rect2(0, 94, 200, 94)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_joorw"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_r0x5m")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3mrqo")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"new_animation",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"new_animation_1",
-"speed": 5.0
-}]
-
 [node name="Game" type="Node2D"]
 
 [node name="Unnamed" type="Sprite2D" parent="."]
 position = Vector2(-4.00006, -0.999975)
 scale = Vector2(1.21799, 1.08092)
-texture = ExtResource("1")
-
-[node name="Unnamed" type="Sprite2D" parent="Unnamed"]
-position = Vector2(1019.71, 1.85025)
-scale = Vector2(0.993099, 1.00352)
 texture = ExtResource("1")
 
 [node name="poster" parent="." instance=ExtResource("4_t88pq")]
@@ -100,12 +63,5 @@ physics_material_override = SubResource("PhysicsMaterial_u44n3")
 position = Vector2(-724, 3)
 shape = SubResource("RectangleShape2D_sb48q")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(919, -145)
-sprite_frames = SubResource("SpriteFrames_joorw")
-animation = &"new_animation"
-
-[node name="Unnamed2" type="Sprite2D" parent="."]
-position = Vector2(-1135, -26)
-scale = Vector2(0.993099, 1.00352)
-texture = ExtResource("1")
+[node name="televisao" parent="." instance=ExtResource("5_t88pq")]
+position = Vector2(5, 0)
