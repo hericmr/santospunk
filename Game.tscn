@@ -70,7 +70,7 @@ scale = Vector2(1.89583, 1.90895)
 texture = ExtResource("3_yx171")
 
 [node name="Unnamed" type="Sprite2D" parent="."]
-position = Vector2(514.221, 255.345)
+position = Vector2(514.221, 345.345)
 scale = Vector2(1.91363, 1.69007)
 texture = ExtResource("1")
 
@@ -120,8 +120,8 @@ scale = Vector2(1.10851, 1.22073)
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(782, -192.001)
 scale = Vector2(1, 0.92308)
-limit_left = -10155
-limit_top = -10000
+limit_left = 0
+limit_top = -1000000
 limit_right = 10000
 limit_bottom = 10000
 limit_smoothed = true

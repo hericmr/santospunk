@@ -26,93 +26,6 @@ body {
 	outline: none;
 }
 
-/* Controles virtuais para Android */
-.virtual-controls {
-	position: fixed;
-	bottom: 20px;
-	left: 20px;
-	right: 20px;
-	display: none;
-	z-index: 1000;
-	pointer-events: none;
-}
-
-.virtual-controls.mobile {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-end;
-	pointer-events: auto;
-}
-
-.control-group {
-	display: flex;
-	gap: 10px;
-}
-
-.control-button {
-	width: 60px;
-	height: 60px;
-	background: rgba(255, 255, 255, 0.2);
-	border: 2px solid rgba(255, 255, 255, 0.5);
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 24px;
-	color: white;
-	cursor: pointer;
-	user-select: none;
-	touch-action: manipulation;
-	transition: all 0.1s ease;
-}
-
-.control-button:active {
-	background: rgba(255, 255, 255, 0.4);
-	transform: scale(0.95);
-}
-
-.d-pad {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 1fr 1fr 1fr;
-	gap: 2px;
-	width: 120px;
-	height: 120px;
-}
-
-.d-pad-button {
-	width: 38px;
-	height: 38px;
-	background: rgba(255, 255, 255, 0.2);
-	border: 2px solid rgba(255, 255, 255, 0.5);
-	border-radius: 8px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 18px;
-	color: white;
-	cursor: pointer;
-	user-select: none;
-	touch-action: manipulation;
-	transition: all 0.1s ease;
-}
-
-.d-pad-button:active {
-	background: rgba(255, 255, 255, 0.4);
-	transform: scale(0.95);
-}
-
-.d-pad-button:nth-child(1) { grid-column: 2; grid-row: 1; } /* Up */
-.d-pad-button:nth-child(2) { grid-column: 1; grid-row: 2; } /* Left */
-.d-pad-button:nth-child(3) { grid-column: 3; grid-row: 2; } /* Right */
-.d-pad-button:nth-child(4) { grid-column: 2; grid-row: 3; } /* Down */
-
-@media (max-width: 768px) {
-	.virtual-controls {
-		display: flex;
-	}
-}
-
 #status, #status-splash, #status-progress {
 	position: absolute;
 	left: 0;
@@ -186,26 +99,6 @@ here we go
 			Your browser does not support the canvas tag.
 		</canvas>
 
-		<!-- Controles virtuais para Android -->
-		<div id="virtual-controls" class="virtual-controls">
-			<!-- D-Pad para movimento -->
-			<div class="control-group">
-				<div class="d-pad">
-					<div class="d-pad-button" data-action="move_up">↑</div>
-					<div class="d-pad-button" data-action="move_left">←</div>
-					<div class="d-pad-button" data-action="move_right">→</div>
-					<div class="d-pad-button" data-action="move_down">↓</div>
-				</div>
-			</div>
-			
-			<!-- Botões de ação -->
-			<div class="control-group">
-				<div class="control-button" data-action="jump">JUMP</div>
-				<div class="control-button" data-action="attack">ATK</div>
-				<div class="control-button" data-action="attack2">ATK2</div>
-			</div>
-		</div>
-
 		<noscript>
 			Your browser does not support JavaScript.
 		</noscript>
@@ -218,79 +111,7 @@ here we go
 
 		<script src="index.js"></script>
 		<script>
-		// Detectar mobile e configurar controles virtuais
-		function initVirtualControls() {
-			const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
-			const virtualControls = document.getElementById('virtual-controls');
-			
-			if (isMobile) {
-				virtualControls.classList.add('mobile');
-				
-				// Mapear ações para teclas
-				const actionToKey = {
-					'move_up': 'ArrowUp',
-					'move_down': 'ArrowDown', 
-					'move_left': 'ArrowLeft',
-					'move_right': 'ArrowRight',
-					'jump': 'Space',
-					'attack': 'KeyJ',
-					'attack2': 'KeyK'
-				};
-				
-				// Adicionar eventos de touch
-				document.querySelectorAll('[data-action]').forEach(button => {
-					const action = button.getAttribute('data-action');
-					const key = actionToKey[action];
-					
-					if (key) {
-						// Touch start - simula keydown
-						button.addEventListener('touchstart', function(e) {
-							e.preventDefault();
-							simulateKeyEvent(key, 'keydown');
-							button.style.background = 'rgba(255, 255, 255, 0.4)';
-						});
-						
-						// Touch end - simula keyup
-						button.addEventListener('touchend', function(e) {
-							e.preventDefault();
-							simulateKeyEvent(key, 'keyup');
-							button.style.background = 'rgba(255, 255, 255, 0.2)';
-						});
-						
-						// Mouse events para desktop testing
-						button.addEventListener('mousedown', function(e) {
-							e.preventDefault();
-							simulateKeyEvent(key, 'keydown');
-							button.style.background = 'rgba(255, 255, 255, 0.4)';
-						});
-						
-						button.addEventListener('mouseup', function(e) {
-							e.preventDefault();
-							simulateKeyEvent(key, 'keyup');
-							button.style.background = 'rgba(255, 255, 255, 0.2)';
-						});
-					}
-				});
-			}
-		}
-		
-		// Simular eventos de teclado
-		function simulateKeyEvent(key, type) {
-			const event = new KeyboardEvent(type, {
-				key: key,
-				code: key,
-				bubbles: true,
-				cancelable: true
-			});
-			document.dispatchEvent(event);
-		}
-		
-		// Inicializar controles quando a página carregar
-		window.addEventListener('load', initVirtualControls);
-		</script>
-		
-		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":26531456,"index.wasm":52126319},"focusCanvas":true,"gdextensionLibs":[]};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":26647952,"index.wasm":52126319},"focusCanvas":true,"gdextensionLibs":[]};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
