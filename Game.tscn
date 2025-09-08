@@ -1,10 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://b4fvjg6heglmq"]
+[gd_scene load_steps=15 format=3 uid="uid://b4fvjg6heglmq"]
 
 [ext_resource type="Texture2D" uid="uid://cp63h017mg0r1" path="res://assets/unnamed.png" id="1"]
 [ext_resource type="PackedScene" uid="uid://c0ybmjtnpdr1a" path="res://Player.tscn" id="2"]
+[ext_resource type="Texture2D" uid="uid://d2yx8tpmhkfbm" path="res://assets/2 Background/4.png" id="2_2vekm"]
+[ext_resource type="Texture2D" uid="uid://bfh808lwl61ki" path="res://assets/filete.png" id="2_gwjdr"]
 [ext_resource type="Texture2D" uid="uid://ckvhyfdqwmm3f" path="res://assets/DystopianCity/PNG/0.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://ish5bnuu1pp0" path="res://assets/2 Background/3.png" id="3_yx171"]
 [ext_resource type="AudioStream" uid="uid://dcn0p2s53uljm" path="res://assets/eletronic.ogg" id="4_sb48q"]
 [ext_resource type="Texture2D" uid="uid://ctfwbx8ceg834" path="res://assets/3 Objects/Barrel2.png" id="5_t88pq"]
+[ext_resource type="Texture2D" uid="uid://cwxxh6i1p06pr" path="res://assets/DystopianCity/PNG/1.png" id="8_yhmtn"]
+[ext_resource type="Texture2D" uid="uid://ho7vyhcgo08f" path="res://assets/DystopianCity/PNG/4.png" id="9_gwjdr"]
+[ext_resource type="Texture2D" uid="uid://dr2w2hxbsbde4" path="res://assets/glitch_overlay.png" id="11_lvtmh"]
+[ext_resource type="Texture2D" uid="uid://dy8qljcm7yfbu" path="res://assets/lion2 copy.png" id="12_yyih5"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(2482, 13)
@@ -42,6 +49,36 @@ shape = SubResource("1")
 position = Vector2(-204, -165)
 texture = ExtResource("3")
 
+[node name="Filete" type="Sprite2D" parent="."]
+position = Vector2(2323.31, 243)
+scale = Vector2(20.1611, 1.66111)
+texture = ExtResource("2_gwjdr")
+
+[node name="Filete2" type="Sprite2D" parent="Filete"]
+position = Vector2(-169.103, 9.6321)
+scale = Vector2(0.72802, 1.01981)
+texture = ExtResource("2_gwjdr")
+
+[node name="Filete" type="Sprite2D" parent="Filete"]
+position = Vector2(2323.31, 243)
+scale = Vector2(20.1611, 1.66111)
+texture = ExtResource("2_gwjdr")
+
+[node name="Filete" type="Sprite2D" parent="Filete/Filete"]
+position = Vector2(2323.31, 243)
+scale = Vector2(20.1611, 1.66111)
+texture = ExtResource("2_gwjdr")
+
+[node name="5" type="Sprite2D" parent="."]
+position = Vector2(2469.25, 243.25)
+scale = Vector2(2.39149, 2.52006)
+texture = ExtResource("2_2vekm")
+
+[node name="3" type="Sprite2D" parent="."]
+position = Vector2(2320, 342)
+scale = Vector2(1.89583, 1.90895)
+texture = ExtResource("3_yx171")
+
 [node name="Unnamed" type="Sprite2D" parent="."]
 position = Vector2(514.221, 255.345)
 scale = Vector2(1.91363, 1.69007)
@@ -51,11 +88,6 @@ texture = ExtResource("1")
 position = Vector2(-269, 495)
 scale = Vector2(1, 1.08333)
 
-[node name="0" type="Sprite2D" parent="."]
-position = Vector2(-117, 415)
-scale = Vector2(2.77265, 3.45938)
-texture = ExtResource("3")
-
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_sb48q")
 volume_db = -17.829
@@ -63,13 +95,59 @@ autoplay = true
 
 [node name="Barrel2" type="Sprite2D" parent="."]
 physics_interpolation_mode = 1
-position = Vector2(1352, 688)
+position = Vector2(1405, 684)
 scale = Vector2(3.77778, 2.71154)
 texture = ExtResource("5_t88pq")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+visible = false
 position = Vector2(487, 5.76)
 scale = Vector2(1.728, 2.17)
 amount = 900
 visibility_rect = Rect2(0, 0, 0, 0)
 process_material = SubResource("ParticleProcessMaterial_sb48q")
+
+[node name="1" type="Sprite2D" parent="."]
+position = Vector2(-1170, 279)
+scale = Vector2(2.36577, 3.15385)
+texture = ExtResource("8_yhmtn")
+
+[node name="4" type="Sprite2D" parent="1"]
+position = Vector2(173.728, 138.561)
+scale = Vector2(0.419858, 0.241108)
+texture = ExtResource("9_gwjdr")
+
+[node name="GlitchOverlay" type="Sprite2D" parent="1"]
+position = Vector2(1065.19, -27.6646)
+scale = Vector2(0.151576, 0.0198171)
+texture = ExtResource("11_lvtmh")
+
+[node name="1" type="Sprite2D" parent="1"]
+position = Vector2(1486.2, 1.90243)
+scale = Vector2(1.15177, 0.92378)
+texture = ExtResource("8_yhmtn")
+
+[node name="0" type="Sprite2D" parent="."]
+position = Vector2(-930, 239)
+scale = Vector2(3.14933, 4.30715)
+texture = ExtResource("3")
+
+[node name="4" type="Sprite2D" parent="0"]
+position = Vector2(877.33, 115.622)
+scale = Vector2(0.360666, 0.28907)
+texture = ExtResource("9_gwjdr")
+
+[node name="4" type="Sprite2D" parent="0/4"]
+position = Vector2(735.129, 4.81902)
+scale = Vector2(1.46885, 1.31479)
+texture = ExtResource("9_gwjdr")
+
+[node name="2" type="Sprite2D" parent="."]
+position = Vector2(2011, 122)
+scale = Vector2(3.2026, 5.13654)
+texture = ExtResource("3")
+
+[node name="Lion2Copy" type="Sprite2D" parent="."]
+position = Vector2(-1278, 1300)
+scale = Vector2(0.207143, 0.19218)
+texture = ExtResource("12_yyih5")
