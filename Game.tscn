@@ -91,7 +91,6 @@ scale = Vector2(0.508272, 0.69092)
 texture = ExtResource("2_2vekm")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
-visible = false
 position = Vector2(487, 5.76)
 scale = Vector2(1.728, 2.17)
 amount = 900
