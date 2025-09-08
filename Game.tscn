@@ -40,13 +40,13 @@ position = Vector2(-204, -165)
 texture = ExtResource("3")
 
 [node name="Filete" type="Sprite2D" parent="."]
-position = Vector2(2323.31, 243)
-scale = Vector2(20.1611, 1.66111)
+position = Vector2(2323.31, 321.437)
+scale = Vector2(20.1611, 1.39295)
 texture = ExtResource("2_gwjdr")
 
 [node name="Filete2" type="Sprite2D" parent="Filete"]
-position = Vector2(-169.103, 6.02008)
-scale = Vector2(0.72802, 1.01981)
+position = Vector2(-169.103, 9.13778)
+scale = Vector2(0.72802, 1.00915)
 texture = ExtResource("2_gwjdr")
 
 [node name="Filete" type="Sprite2D" parent="Filete"]
@@ -70,8 +70,8 @@ scale = Vector2(1.89583, 1.90895)
 texture = ExtResource("3_yx171")
 
 [node name="Unnamed" type="Sprite2D" parent="."]
-position = Vector2(514.221, 345.345)
-scale = Vector2(1.91363, 1.69007)
+position = Vector2(514.221, 418.555)
+scale = Vector2(1.91363, 1.47848)
 texture = ExtResource("1")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
@@ -112,19 +112,6 @@ position = Vector2(173.728, 141.098)
 scale = Vector2(0.419858, 0.241108)
 texture = ExtResource("9_gwjdr")
 
-[node name="Player" parent="." instance=ExtResource("2")]
-position = Vector2(-247.732, 459.395)
-scale = Vector2(1.10851, 1.22073)
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(782, -192.001)
-scale = Vector2(1, 0.92308)
-limit_left = 0
-limit_top = -1000000
-limit_right = 10000
-limit_bottom = 10000
-limit_smoothed = true
-
 [node name="0" type="Sprite2D" parent="."]
 position = Vector2(-936, 233)
 scale = Vector2(3.14933, 4.30715)
@@ -151,6 +138,19 @@ scale = Vector2(1.46885, 1.31479)
 texture = ExtResource("9_gwjdr")
 
 [node name="2" type="Sprite2D" parent="."]
-position = Vector2(2011, 122)
+position = Vector2(2001, 259)
 scale = Vector2(3.2026, 5.13654)
 texture = ExtResource("3")
+
+[node name="Player" parent="." instance=ExtResource("2")]
+position = Vector2(-247.732, 459.395)
+scale = Vector2(1.10851, 1.22073)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(782, -192.001)
+scale = Vector2(1, 0.92308)
+limit_left = 0
+limit_top = -1000000
+limit_right = 10000
+limit_bottom = 10000
+limit_smoothed = true
