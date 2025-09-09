@@ -13,6 +13,7 @@ config_version=5
 config/name="firstgame"
 run/main_scene="res://Game.tscn"
 config/features=PackedStringArray("4.4")
+boot_splash/image="/home/hericmr/Downloads/IMG_1051.png"
 config/icon="res://icon.png"
 
 [display]
