@@ -4,7 +4,6 @@ extends Area2D
 @export var face_texture: Texture2D
 @export_multiline var dialog_text: String = ""
 
-var _shown := false # legado, mantido para compatibilidade
 var _player_inside := false
 var _player_ref: Node2D = null
 var _indicator_label: Label = null
