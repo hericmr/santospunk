@@ -153,7 +153,7 @@ scale = Vector2(1.24974, 1.34268)
 texture = ExtResource("5_t88pq")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1018.5, 132.375)
+position = Vector2(1019.5, 132.375)
 shape = SubResource("RectangleShape2D_yhmtn")
 one_way_collision_margin = 32.3
 debug_color = Color(0.977843, 0, 0.400928, 0.42)
