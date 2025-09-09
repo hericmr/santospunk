@@ -18,6 +18,9 @@ var can_double_jump = true
 
 
 func _ready():
+	# Adicionar o jogador ao grupo "player" para detecção de transição
+	add_to_group("player")
+	
 	_setup_input_actions()
 	_play_if_exists("idle")
 	if _is_touch():
