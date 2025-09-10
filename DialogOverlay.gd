@@ -14,6 +14,7 @@ var _full_text: String = ""
 var _char_index: int = 0
 var _accum: float = 0.0
 var _is_typing: bool = false
+var _is_closing: bool = false
 
 func _ready():
 	if poster_texture and poster_rect:
@@ -24,9 +25,11 @@ func _ready():
 		_start_typing(dialog_text)
 
 	if close_btn:
-		close_btn.pressed.connect(_on_close)
+		close_btn.pressed.connect(_close_dialog)
 
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	# Garantir que o input seja capturado
+	set_process_input(true)
 
 func _process(delta):
 	if _is_typing and text_label:
@@ -38,10 +41,19 @@ func _process(delta):
 		if _char_index >= _full_text.length():
 			_is_typing = false
 
-func _unhandled_input(event):
-	if _is_typing and event.is_action_pressed("ui_accept") and text_label:
-		text_label.text = _full_text
-		_is_typing = false
+func _input(event):
+	if not _is_closing:
+		if event.is_action_pressed("ui_accept"):
+			if _is_typing and text_label:
+				print("Pulando texto...")
+				text_label.text = _full_text
+				_is_typing = false
+			elif not _is_typing:
+				print("Fechando diálogo (ESPAÇO)...")
+				_close_dialog()
+		elif event.is_action_pressed("ui_cancel"):
+			print("Fechando diálogo (ESC)...")
+			_close_dialog()
 
 func _start_typing(text: String):
 	_full_text = text
@@ -50,6 +62,17 @@ func _start_typing(text: String):
 	_is_typing = true
 	text_label.text = ""
 
-func _on_close():
+func _close_dialog():
+	if _is_closing:
+		return
+		
+	_is_closing = true
+	print("Fechando diálogo - despausando jogo...")
 	get_tree().paused = false
+	
+	# Usar call_deferred para garantir que seja executado no próximo frame
+	call_deferred("_actually_close")
+
+func _actually_close():
+	print("Removendo diálogo...")
 	queue_free()
