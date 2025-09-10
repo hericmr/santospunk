@@ -31,7 +31,7 @@ tracks/0/path = NodePath("ColorRect/PapaiLionLogo:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(-0.0666667, 1.06667, 2.03333, 3),
+"times": PackedFloat32Array(-0.0666667, 1.4, 1.86667, 2.1),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -43,7 +43,7 @@ tracks/1/path = NodePath("Sprite2D:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(2.03333, 3, 4.96667),
+"times": PackedFloat32Array(2.23333, 3.2, 4.96667),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
@@ -67,37 +67,33 @@ offset_right = 639.0
 offset_bottom = 360.0
 color = Color(0, 0, 0, 1)
 
-[node name="PapaiLionLogo" type="TextureRect" parent="ColorRect"]
+[node name="PapaiLionLogo" type="Sprite2D" parent="ColorRect"]
 modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_left = 192.0
-offset_top = 20.0
-offset_right = 472.0
-offset_bottom = 260.0
+position = Vector2(325.99, 168)
+scale = Vector2(0.5, 0.4875)
 texture = ExtResource("4_j1d14")
 
 [node name="TextoPapaiLion" type="TextureRect" parent="ColorRect/PapaiLionLogo"]
 custom_minimum_size = Vector2(-0.675, -1.115)
-layout_mode = 0
-offset_left = 10.0
-offset_top = 246.0
-offset_right = 254.0
-offset_bottom = 298.0
+offset_left = -133.0
+offset_top = 140.462
+offset_right = 111.0
+offset_bottom = 192.462
 texture = ExtResource("3_7tc72")
 expand_mode = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(339.315, 142.75)
-scale = Vector2(0.941532, 0.972917)
+position = Vector2(323, 160)
+scale = Vector2(0.575674, 0.554167)
 texture = ExtResource("2_t0076")
 
 [node name="TextoPapaiLion" type="TextureRect" parent="Sprite2D"]
 custom_minimum_size = Vector2(-0.675, -1.115)
 offset_left = -183.015
-offset_top = 142.098
+offset_top = 147.512
 offset_right = 159.985
-offset_bottom = 208.098
+offset_bottom = 213.512
 texture = ExtResource("5_dv2m2")
 expand_mode = 3
 
