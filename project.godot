@@ -14,9 +14,10 @@ config/name="firstgame"
 run/main_scene="res://cenas/splash.tscn"
 config/features=PackedStringArray("4.4")
 boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/show_image=false
+boot_splash/fullsize=false
 boot_splash/use_filter=false
 config/icon="res://artes/icon.png"
-boot_splash/minimum_display_time=1000
 
 [display]
 
