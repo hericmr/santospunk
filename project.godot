@@ -14,8 +14,10 @@ config/name="firstgame"
 run/main_scene="res://Game.tscn"
 config/features=PackedStringArray("4.4")
 boot_splash/bg_color=Color(0, 0, 0, 1)
-boot_splash/image="/home/hericmr/Downloads/IMG_1051.png"
+boot_splash/use_filter=false
+boot_splash/image="/home/hericmr/Documentos/rpg/public/assets/sprites/lion_2.png"
 config/icon="res://icon.png"
+boot_splash/minimum_display_time=1000
 
 [display]
 
