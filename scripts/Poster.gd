@@ -36,7 +36,7 @@ func _process(_delta):
 			_show_dialog()
 
 func _show_dialog():
-	var dialog_scene: PackedScene = load("res://DialogOverlay.tscn")
+	var dialog_scene: PackedScene = load("res://cenas/DialogOverlay.tscn")
 	if dialog_scene == null:
 		return
 	var overlay = dialog_scene.instantiate()
@@ -45,7 +45,7 @@ func _show_dialog():
 		overlay.set("poster_texture", poster_texture)
 	var face_tex: Texture2D = face_texture
 	if face_tex == null:
-		var maybe: Texture2D = load("res://assets/heric_rosto.png")
+		var maybe: Texture2D = load("res://artes/heric_rosto.png")
 		if maybe != null:
 			face_tex = maybe
 	if face_tex:

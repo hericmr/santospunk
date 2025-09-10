@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cnmygj0max3e"
-path="res://.godot/imported/3.PNG-1bf48ed1b7cee962cd2320196a1972ad.ctex"
+path="res://.godot/imported/3.PNG-aca932418cb2e8140b7dfcca55bc8a33.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/DystopianCity/PNG/3.PNG"
-dest_files=["res://.godot/imported/3.PNG-1bf48ed1b7cee962cd2320196a1972ad.ctex"]
+source_file="res://artes/DystopianCity/PNG/3.PNG"
+dest_files=["res://.godot/imported/3.PNG-aca932418cb2e8140b7dfcca55bc8a33.ctex"]
 
 [params]
 

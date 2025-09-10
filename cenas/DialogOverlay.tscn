@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://c52bfofl16dod"]
 
-[ext_resource type="Script" uid="uid://b4hl2nkd3howv" path="res://DialogOverlay.gd" id="1_pq5m8"]
-[ext_resource type="Texture2D" uid="uid://dkaagysdi2mrs" path="res://assets/parede_poster.png" id="2_gnw01"]
-[ext_resource type="Texture2D" uid="uid://ddcnhqth2b8ps" path="res://assets/heric_rosto.png" id="3_gnw01"]
+[ext_resource type="Script" uid="uid://b4hl2nkd3howv" path="res://scripts/DialogOverlay.gd" id="1_pq5m8"]
+[ext_resource type="Texture2D" uid="uid://dkaagysdi2mrs" path="res://artes/parede_poster.png" id="2_gnw01"]
+[ext_resource type="Texture2D" uid="uid://ddcnhqth2b8ps" path="res://artes/heric_rosto.png" id="3_gnw01"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_gnw01"]
 blend_mode = 3

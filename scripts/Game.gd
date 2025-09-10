@@ -2,10 +2,10 @@ extends Node2D
 
 # Dicionário com as cenas de destino para cada direção
 var scene_transitions = {
-	"right": "res://bar_da_tia_ana_frente.tscn",
-	"left": "res://bar_da_tia_ana_frente.tscn",  # Pode ser alterado para outra cena
-	"up": "res://bar_da_tia_ana_frente.tscn",    # Pode ser alterado para outra cena
-	"down": "res://bar_da_tia_ana_frente.tscn"   # Pode ser alterado para outra cena
+	"right": "res://cenas/bar_da_tia_ana_frente.tscn",
+	"left": "res://cenas/bar_da_tia_ana_frente.tscn",  # Pode ser alterado para outra cena
+	"up": "res://cenas/bar_da_tia_ana_frente.tscn",    # Pode ser alterado para outra cena
+	"down": "res://cenas/bar_da_tia_ana_frente.tscn"   # Pode ser alterado para outra cena
 }
 
 func _ready():

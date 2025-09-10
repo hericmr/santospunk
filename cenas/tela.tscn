@@ -1,8 +1,8 @@
 [gd_scene load_steps=12 format=3 uid="uid://1p3l0jjpovv5"]
 
-[ext_resource type="Texture2D" uid="uid://b1q4mm1wct6u0" path="res://assets/tiaana.png" id="1_0e48y"]
-[ext_resource type="Script" uid="uid://c16l0eya2f3b8" path="res://tela.gd" id="1_hlxoe"]
-[ext_resource type="Texture2D" uid="uid://dxjhoq13oidcs" path="res://assets/Free Industrial Zone Tileset(1)/4 Animated objects/Screen1.png" id="2_epypp"]
+[ext_resource type="Texture2D" uid="uid://b1q4mm1wct6u0" path="res://artes/tiaana.png" id="1_0e48y"]
+[ext_resource type="Script" uid="uid://c16l0eya2f3b8" path="res://scripts/tela.gd" id="1_hlxoe"]
+[ext_resource type="Texture2D" uid="uid://dxjhoq13oidcs" path="res://artes/Free Industrial Zone Tileset(1)/4 Animated objects/Screen1.png" id="2_epypp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r0x5m"]
 atlas = ExtResource("1_0e48y")

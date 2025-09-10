@@ -11,12 +11,11 @@ config_version=5
 [application]
 
 config/name="firstgame"
-run/main_scene="res://Game.tscn"
+run/main_scene="res://cenas/splash.tscn"
 config/features=PackedStringArray("4.4")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/use_filter=false
-boot_splash/image="/home/hericmr/Documentos/rpg/public/assets/sprites/lion_2.png"
-config/icon="res://icon.png"
+config/icon="res://artes/icon.png"
 boot_splash/minimum_display_time=1000
 
 [display]

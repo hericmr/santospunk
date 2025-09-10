@@ -7,4 +7,4 @@ func _ready():
 func _input(event):
 	# Voltar para a cena anterior quando pressionar ESC
 	if event.is_action_pressed("ui_cancel"):
-		get_tree().change_scene_to_file("res://Game.tscn")
+		get_tree().change_scene_to_file("res://cenas/Game.tscn")

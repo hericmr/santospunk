@@ -1,11 +1,11 @@
 [gd_scene load_steps=39 format=3 uid="uid://c0ybmjtnpdr1a"]
 
-[ext_resource type="Texture2D" uid="uid://bdr1ihfd5myym" path="res://assets/Free 3 Cyberpunk Sprites Pixel Art/2 Punk/heric_punk.png" id="1"]
-[ext_resource type="Texture2D" uid="uid://cmj06k2ajlq4i" path="res://assets/Free 3 Cyberpunk Sprites Pixel Art/2 Punk/heric_run.png" id="2"]
-[ext_resource type="Texture2D" uid="uid://bxcisuyklwhdw" path="res://assets/Free 3 Cyberpunk Sprites Pixel Art/2 Punk/Punk_attack1.png" id="4"]
-[ext_resource type="Texture2D" uid="uid://ds8ks3lj66lme" path="res://assets/heric_doublejump-1.png" id="4_tdg3f"]
-[ext_resource type="Texture2D" uid="uid://dh6a4x2eyofyj" path="res://assets/Free 3 Cyberpunk Sprites Pixel Art/2 Punk/Punk_attack2.png" id="5"]
-[ext_resource type="Script" uid="uid://b7ifpmy6odu25" path="res://Player.gd" id="6"]
+[ext_resource type="Texture2D" uid="uid://bdr1ihfd5myym" path="res://artes/Free 3 Cyberpunk Sprites Pixel Art/2 Punk/heric_punk.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://cmj06k2ajlq4i" path="res://artes/Free 3 Cyberpunk Sprites Pixel Art/2 Punk/heric_run.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://bxcisuyklwhdw" path="res://artes/Free 3 Cyberpunk Sprites Pixel Art/2 Punk/Punk_attack1.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://ds8ks3lj66lme" path="res://artes/heric_doublejump-1.png" id="4_tdg3f"]
+[ext_resource type="Texture2D" uid="uid://dh6a4x2eyofyj" path="res://artes/Free 3 Cyberpunk Sprites Pixel Art/2 Punk/Punk_attack2.png" id="5"]
+[ext_resource type="Script" uid="uid://b7ifpmy6odu25" path="res://scripts/Player.gd" id="6"]
 
 [sub_resource type="AtlasTexture" id="6"]
 atlas = ExtResource("4")
