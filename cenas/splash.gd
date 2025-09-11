@@ -5,4 +5,4 @@ func _ready():
 
 
 func _on_fade_logo_animation_finished(anim_name: StringName):
-	get_tree().change_scene_to_file("res://cenas/Game.tscn")
+	get_tree().change_scene_to_file("res://mainmenu/scenes/main_menu.tscn")
