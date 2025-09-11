@@ -1,13 +1,32 @@
-[gd_scene load_steps=12 format=3 uid="uid://dc388hkklqvvc"]
+[gd_scene load_steps=55 format=3 uid="uid://dc388hkklqvvc"]
 
 [ext_resource type="Theme" uid="uid://cb2tqos08yhkd" path="res://assets/MinimalUI/MinimalUI.tres" id="1_0ajpt"]
-[ext_resource type="Texture2D" uid="uid://cigypcksu66sa" path="res://assets/artes/titulo.svg" id="1_8ln24"]
+[ext_resource type="Texture2D" uid="uid://dq2locos3p5hb" path="res://assets/artes/titulo.svg" id="1_8ln24"]
 [ext_resource type="Script" uid="uid://odjr2ux2r4gr" path="res://scripts/main_menu.gd" id="1_tievw"]
-[ext_resource type="Texture2D" uid="uid://2ro0lxnrdsxm" path="res://assets/artes/character.png" id="2_oa1go"]
-[ext_resource type="Texture2D" uid="uid://cveb8mufvm5ed" path="res://assets/artes/menu.png" id="2_wu84c"]
-[ext_resource type="PackedScene" uid="uid://603k3vy4p3f1" path="res://scenes/settings.tscn" id="3_dt7l5"]
-[ext_resource type="Texture2D" uid="uid://ct5afc5mswrli" path="res://assets/artes/xumbro.png" id="3_tbmy8"]
-[ext_resource type="AudioStream" uid="uid://dam27kuq72hgf" path="res://assets/audio/Matanza - Bom é Quando Faz Mal.mp3" id="8_tbmy8"]
+[ext_resource type="Texture2D" uid="uid://dsqd8v0v1qew0" path="res://assets/artes/character.png" id="2_oa1go"]
+[ext_resource type="Texture2D" uid="uid://bcjk15uf2ba84" path="res://assets/artes/menu.png" id="2_wu84c"]
+[ext_resource type="Texture2D" uid="uid://bnhtsgkr74u0o" path="res://assets/artes/xumbro.png" id="3_tbmy8"]
+[ext_resource type="Texture2D" uid="uid://cx6t42r2f6rgl" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/9 Other/3 Skill icons/Skillicon7_19.png" id="7_tbmy8"]
+[ext_resource type="AudioStream" uid="uid://w03l34vs650e" path="res://assets/audio/Matanza - Bom é Quando Faz Mal.mp3" id="8_tbmy8"]
+[ext_resource type="Texture2D" uid="uid://fkn2hwl5m0d8" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/9 Other/3 Skill icons/Skillicon7_20.png" id="9_vr8o3"]
+[ext_resource type="Texture2D" uid="uid://c0fbn1jy8a513" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/9 Other/3 Skill icons/Skillicon7_08.png" id="10_1a85y"]
+[ext_resource type="Texture2D" uid="uid://bgxkr6ff56gci" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/9 Other/3 Skill icons/Skillicon7_09.png" id="11_hl5e0"]
+[ext_resource type="Texture2D" uid="uid://o1c1eekbw3k8" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/9 Other/3 Skill icons/Skillicon7_10.png" id="12_engjn"]
+[ext_resource type="Texture2D" uid="uid://dix8p0y5enw73" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/9 Other/3 Skill icons/Skillicon7_11.png" id="13_6h3lr"]
+[ext_resource type="Texture2D" uid="uid://bk1e1nqegu083" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/9 Other/3 Skill icons/Skillicon7_12.png" id="14_dj67d"]
+[ext_resource type="Texture2D" uid="uid://b5dmgkac5up8u" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/9 Other/3 Skill icons/Skillicon7_13.png" id="15_6vcge"]
+[ext_resource type="Texture2D" uid="uid://djdchk74xc04j" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/9 Other/3 Skill icons/Skillicon7_14.png" id="16_ip0br"]
+[ext_resource type="Texture2D" uid="uid://b4saeanssxe4m" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/9 Other/3 Skill icons/Skillicon7_15.png" id="17_xyero"]
+[ext_resource type="Texture2D" uid="uid://d16l86pyhxr58" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/9 Other/3 Skill icons/Skillicon7_16.png" id="18_tcusk"]
+[ext_resource type="Texture2D" uid="uid://cs180ojrly2u0" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/9 Other/3 Skill icons/Skillicon7_17.png" id="19_4puye"]
+[ext_resource type="Texture2D" uid="uid://q374vhgp5qfe" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/9 Other/3 Skill icons/Skillicon7_18.png" id="20_q13xq"]
+[ext_resource type="Texture2D" uid="uid://8djner2shb57" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/9 Other/3 Skill icons/Skillicon7_01.png" id="21_u43bj"]
+[ext_resource type="Texture2D" uid="uid://cy7vyxjv77kw0" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/9 Other/3 Skill icons/Skillicon7_02.png" id="22_jvjdd"]
+[ext_resource type="Texture2D" uid="uid://dehptdbp41x8u" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/9 Other/3 Skill icons/Skillicon7_03.png" id="23_yxnar"]
+[ext_resource type="Texture2D" uid="uid://dfk8cfjpekc8f" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/9 Other/3 Skill icons/Skillicon7_04.png" id="24_eku7s"]
+[ext_resource type="Texture2D" uid="uid://wwp61qef482m" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/9 Other/3 Skill icons/Skillicon7_05.png" id="25_c6nra"]
+[ext_resource type="Texture2D" uid="uid://ff3qe040rieo" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/9 Other/3 Skill icons/Skillicon7_06.png" id="26_qw82i"]
+[ext_resource type="Texture2D" uid="uid://bojcmytv8iva" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/9 Other/3 Skill icons/Skillicon7_07.png" id="27_1468l"]
 
 [sub_resource type="Animation" id="Animation_5dd4i"]
 length = 0.001
@@ -94,6 +113,192 @@ _data = {
 &"personagens": SubResource("Animation_jk1qb")
 }
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_01xyg"]
+texture = ExtResource("7_tbmy8")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_764ux"]
+texture = ExtResource("9_vr8o3")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wadof"]
+texture = ExtResource("10_1a85y")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b4jiv"]
+texture = ExtResource("11_hl5e0")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_68b7m"]
+texture = ExtResource("12_engjn")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vanrq"]
+texture = ExtResource("13_6h3lr")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ybca7"]
+texture = ExtResource("14_dj67d")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k5xsf"]
+texture = ExtResource("15_6vcge")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_71lbq"]
+texture = ExtResource("16_ip0br")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_akqfu"]
+texture = ExtResource("17_xyero")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mb34c"]
+texture = ExtResource("18_tcusk")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sgh51"]
+texture = ExtResource("19_4puye")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hjv1c"]
+texture = ExtResource("11_hl5e0")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_41a2d"]
+texture = ExtResource("20_q13xq")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f5cck"]
+texture = ExtResource("7_tbmy8")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s4ogs"]
+texture = ExtResource("9_vr8o3")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ew011"]
+texture = ExtResource("21_u43bj")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tcyl8"]
+texture = ExtResource("22_jvjdd")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tgcit"]
+texture = ExtResource("23_yxnar")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5053t"]
+texture = ExtResource("24_eku7s")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2wgix"]
+texture = ExtResource("25_c6nra")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b56yx"]
+texture = ExtResource("26_qw82i")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h5mb6"]
+texture = ExtResource("27_1468l")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_jk1qb"]
+sources/0 = SubResource("TileSetAtlasSource_01xyg")
+sources/1 = SubResource("TileSetAtlasSource_764ux")
+sources/2 = SubResource("TileSetAtlasSource_hjv1c")
+sources/3 = SubResource("TileSetAtlasSource_ew011")
+sources/4 = SubResource("TileSetAtlasSource_tcyl8")
+sources/5 = SubResource("TileSetAtlasSource_tgcit")
+sources/6 = SubResource("TileSetAtlasSource_5053t")
+sources/7 = SubResource("TileSetAtlasSource_2wgix")
+sources/8 = SubResource("TileSetAtlasSource_b56yx")
+sources/9 = SubResource("TileSetAtlasSource_h5mb6")
+sources/10 = SubResource("TileSetAtlasSource_wadof")
+sources/11 = SubResource("TileSetAtlasSource_b4jiv")
+sources/12 = SubResource("TileSetAtlasSource_68b7m")
+sources/13 = SubResource("TileSetAtlasSource_vanrq")
+sources/14 = SubResource("TileSetAtlasSource_ybca7")
+sources/15 = SubResource("TileSetAtlasSource_k5xsf")
+sources/16 = SubResource("TileSetAtlasSource_71lbq")
+sources/17 = SubResource("TileSetAtlasSource_akqfu")
+sources/18 = SubResource("TileSetAtlasSource_mb34c")
+sources/19 = SubResource("TileSetAtlasSource_sgh51")
+sources/20 = SubResource("TileSetAtlasSource_41a2d")
+sources/21 = SubResource("TileSetAtlasSource_f5cck")
+sources/22 = SubResource("TileSetAtlasSource_s4ogs")
+
 [node name="MainMenu" type="Node2D"]
 
 [node name="UI" type="CanvasLayer" parent="."]
@@ -154,11 +359,8 @@ size_flags_vertical = 4
 theme = ExtResource("1_0ajpt")
 theme_override_font_sizes/font_size = 24
 text = "Novo jogo"
-
-[node name="Settings" parent="UI" node_paths=PackedStringArray("pre_scene") instance=ExtResource("3_dt7l5")]
-visible = false
-current_tab = 0
-pre_scene = NodePath("../MainMenu")
+icon = ExtResource("7_tbmy8")
+icon_alignment = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -171,5 +373,8 @@ autoplay = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(317, 177)
+
+[node name="TileMap" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_jk1qb")
 
 [connection signal="pressed" from="UI/MainMenu/VBoxContainer/Start" to="UI/MainMenu" method="_on_start_pressed"]

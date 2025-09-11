@@ -1,21 +1,20 @@
-[gd_scene load_steps=26 format=3 uid="uid://b4fvjg6heglmq"]
+[gd_scene load_steps=25 format=3 uid="uid://b4fvjg6heglmq"]
 
-[ext_resource type="Texture2D" uid="uid://bg3jgjcn14ih0" path="res://artes/unnamed.png" id="1"]
-[ext_resource type="Texture2D" uid="uid://cjhs1pjbakucw" path="res://artes/Free Industrial Zone Tileset(1)/2 Background/3.png" id="1_yyih5"]
+[ext_resource type="Texture2D" uid="uid://bv1qu86tf8mnr" path="res://artes/unnamed.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://bcl4pdhmcbtl8" path="res://artes/Free Industrial Zone Tileset(1)/2 Background/3.png" id="1_yyih5"]
 [ext_resource type="PackedScene" uid="uid://c0ybmjtnpdr1a" path="res://cenas/Player.tscn" id="2"]
-[ext_resource type="Texture2D" uid="uid://cweqfuxh18pb7" path="res://artes/degrade.png" id="2_joorw"]
-[ext_resource type="Texture2D" uid="uid://c78fyw1riytdh" path="res://artes/Free Industrial Zone Tileset(1)/2 Background/4.png" id="2_qjyg3"]
-[ext_resource type="Texture2D" uid="uid://ba2l5s66irydr" path="res://artes/Free Industrial Zone Tileset(1)/2 Background/5.png" id="3_elkpi"]
-[ext_resource type="Texture2D" uid="uid://b5qtc4jjul37t" path="res://artes/Free Industrial Zone Tileset(1)/1 Tiles/IndustrialTile_09.png" id="4_gwjdr"]
-[ext_resource type="Texture2D" uid="uid://dvq05drcbmm7h" path="res://artes/free-scrolling-city-backgrounds-pixel-art/1 Backgrounds/1/Day/5.png" id="4_lvtmh"]
-[ext_resource type="AudioStream" uid="uid://cid06idmyap3i" path="res://artes/witch.mp3" id="4_sb48q"]
+[ext_resource type="Texture2D" uid="uid://8bgvxv6ddawl" path="res://artes/degrade.png" id="2_joorw"]
+[ext_resource type="Texture2D" uid="uid://ci8t467ed8v1y" path="res://artes/Free Industrial Zone Tileset(1)/2 Background/4.png" id="2_qjyg3"]
+[ext_resource type="Texture2D" uid="uid://cjolaeyve5ghx" path="res://artes/Free Industrial Zone Tileset(1)/2 Background/5.png" id="3_elkpi"]
+[ext_resource type="Texture2D" uid="uid://culolyrgbydjk" path="res://artes/Free Industrial Zone Tileset(1)/1 Tiles/IndustrialTile_09.png" id="4_gwjdr"]
+[ext_resource type="Texture2D" uid="uid://ciakv46th8c3c" path="res://artes/free-scrolling-city-backgrounds-pixel-art/1 Backgrounds/1/Day/5.png" id="4_lvtmh"]
 [ext_resource type="PackedScene" uid="uid://dokwajyxd77a4" path="res://cenas/Poster.tscn" id="4_t88pq"]
-[ext_resource type="Texture2D" uid="uid://4fc3f2kb1lah" path="res://artes/DystopianCity/PNG/1.png" id="5_r0x5m"]
-[ext_resource type="Texture2D" uid="uid://8gv3t75y86jf" path="res://artes/DystopianCity/PNG/0.png" id="5_t88pq"]
-[ext_resource type="Texture2D" uid="uid://bkiwqyaqbvqga" path="res://artes/DystopianCity/PNG/4.png" id="7_3mrqo"]
-[ext_resource type="Texture2D" uid="uid://c5hhcimqshq2p" path="res://artes/tiaana.png" id="9_2vekm"]
-[ext_resource type="Texture2D" uid="uid://c31mpvxkppytw" path="res://artes/free-scrolling-city-backgrounds-pixel-art/1 Backgrounds/2/Day/2.png" id="15_jfj1b"]
-[ext_resource type="Texture2D" uid="uid://c0sa2jwm28fd3" path="res://artes/free-scrolling-city-backgrounds-pixel-art/1 Backgrounds/2/Day/3.png" id="16_0oim2"]
+[ext_resource type="Texture2D" uid="uid://bs8hj34ihpqfx" path="res://artes/DystopianCity/PNG/1.png" id="5_r0x5m"]
+[ext_resource type="Texture2D" uid="uid://ck2fgqdty2lbp" path="res://artes/DystopianCity/PNG/0.png" id="5_t88pq"]
+[ext_resource type="Texture2D" uid="uid://dygbss8vn2ji5" path="res://artes/DystopianCity/PNG/4.png" id="7_3mrqo"]
+[ext_resource type="Texture2D" uid="uid://ciulk50e04rwi" path="res://artes/tiaana.png" id="9_2vekm"]
+[ext_resource type="Texture2D" uid="uid://l1425ov6is6x" path="res://artes/free-scrolling-city-backgrounds-pixel-art/1 Backgrounds/2/Day/2.png" id="15_jfj1b"]
+[ext_resource type="Texture2D" uid="uid://uctfwdhh6kv6" path="res://artes/free-scrolling-city-backgrounds-pixel-art/1 Backgrounds/2/Day/3.png" id="16_0oim2"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(4964.25, 99)
@@ -170,11 +169,6 @@ debug_color = Color(0.977843, 0, 0.400928, 0.42)
 z_index = -3
 position = Vector2(2591, 183)
 texture = ExtResource("7_3mrqo")
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_sb48q")
-volume_db = -2.71
-autoplay = true
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 position = Vector2(359, 96)

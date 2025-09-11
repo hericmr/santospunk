@@ -8,6 +8,7 @@ extends TabContainer
 func _ready():
 	reload_settings()
 	hide()
+	AudioManager.play_button_sound()
 
 func reset_focus():
 	if current_tab == 0: # Video
@@ -24,4 +25,4 @@ func reload_settings():
 func _on_back_pressed():
 	hide()
 	pre_scene.reset_focus()
-	AudioManager.play_button_sound()
+	
