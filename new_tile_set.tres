@@ -1,0 +1,124 @@
+[gd_resource type="TileSet" load_steps=41 format=3 uid="uid://ctlw5uvwmnhlp"]
+
+[ext_resource type="Texture2D" uid="uid://cx6gfo263q42d" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/3 Icons/Buttons2/Button2_01.png" id="1_nfhse"]
+[ext_resource type="Texture2D" uid="uid://bno62c68q2csb" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/3 Icons/Buttons2/Button2_02.png" id="2_n1ueb"]
+[ext_resource type="Texture2D" uid="uid://c6xmkq13437d7" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/3 Icons/Buttons2/Button2_11.png" id="3_2byik"]
+[ext_resource type="Texture2D" uid="uid://cqdueyfb6kwxu" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/3 Icons/Buttons2/Button2_12.png" id="4_d3rur"]
+[ext_resource type="Texture2D" uid="uid://gny4srmcxa1r" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/3 Icons/Buttons2/Button2_13.png" id="5_rx7uq"]
+[ext_resource type="Texture2D" uid="uid://dcwn1g3ihmq1l" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/3 Icons/Buttons2/Button2_14.png" id="6_3cmhd"]
+[ext_resource type="Texture2D" uid="uid://jfwnbug5h3xt" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/3 Icons/Buttons2/Button2_15.png" id="7_jh8pn"]
+[ext_resource type="Texture2D" uid="uid://bw02wut6mx0lr" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/3 Icons/Buttons2/Button2_16.png" id="8_ce1gm"]
+[ext_resource type="Texture2D" uid="uid://dljk850u1s0j7" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/3 Icons/Buttons2/Button2_17.png" id="9_ndkmv"]
+[ext_resource type="Texture2D" uid="uid://c65fgrui34gfq" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/3 Icons/Buttons2/Button2_18.png" id="10_xewo5"]
+[ext_resource type="Texture2D" uid="uid://dsao8b7876n2a" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/3 Icons/Buttons2/Button2_19.png" id="11_8r72a"]
+[ext_resource type="Texture2D" uid="uid://caib0jxjl8xth" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/3 Icons/Buttons2/Button2_20.png" id="12_yygno"]
+[ext_resource type="Texture2D" uid="uid://mkcodh8ntp6r" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/3 Icons/Buttons2/Button2_03.png" id="13_2fanl"]
+[ext_resource type="Texture2D" uid="uid://q7yju80tfthc" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/3 Icons/Buttons2/Button2_04.png" id="14_edif4"]
+[ext_resource type="Texture2D" uid="uid://cj2i8mgsmao5o" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/3 Icons/Buttons2/Button2_05.png" id="15_hr8hc"]
+[ext_resource type="Texture2D" uid="uid://ccbcfel0cqo4u" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/3 Icons/Buttons2/Button2_06.png" id="16_v10ny"]
+[ext_resource type="Texture2D" uid="uid://du4htyi418q0l" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/3 Icons/Buttons2/Button2_07.png" id="17_7t67m"]
+[ext_resource type="Texture2D" uid="uid://cxj6v2u2k4joj" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/3 Icons/Buttons2/Button2_08.png" id="18_5th5k"]
+[ext_resource type="Texture2D" uid="uid://by5rgycg4n5in" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/3 Icons/Buttons2/Button2_09.png" id="19_isgda"]
+[ext_resource type="Texture2D" uid="uid://c2hw0521wod64" path="res://artes/Free-GUI-for-Cyberpunk-Pixel-Art1/3 Icons/Buttons2/Button2_10.png" id="20_qjj8h"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wkn3q"]
+texture = ExtResource("1_nfhse")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a6h5y"]
+texture = ExtResource("2_n1ueb")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vxfwu"]
+texture = ExtResource("3_2byik")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q2rcp"]
+texture = ExtResource("4_d3rur")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3wlio"]
+texture = ExtResource("5_rx7uq")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xneo2"]
+texture = ExtResource("6_3cmhd")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7ex57"]
+texture = ExtResource("7_jh8pn")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ekuc8"]
+texture = ExtResource("8_ce1gm")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_clblh"]
+texture = ExtResource("9_ndkmv")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hds2t"]
+texture = ExtResource("10_xewo5")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w7oju"]
+texture = ExtResource("11_8r72a")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cc0fi"]
+texture = ExtResource("12_yygno")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2ey4x"]
+texture = ExtResource("13_2fanl")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vk6bx"]
+texture = ExtResource("14_edif4")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vbv3y"]
+texture = ExtResource("15_hr8hc")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_032hv"]
+texture = ExtResource("16_v10ny")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_45tq0"]
+texture = ExtResource("17_7t67m")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d03lk"]
+texture = ExtResource("18_5th5k")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oicy0"]
+texture = ExtResource("19_isgda")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f0vs0"]
+texture = ExtResource("20_qjj8h")
+0:0/0 = 0
+
+[resource]
+sources/0 = SubResource("TileSetAtlasSource_wkn3q")
+sources/1 = SubResource("TileSetAtlasSource_a6h5y")
+sources/2 = SubResource("TileSetAtlasSource_2ey4x")
+sources/3 = SubResource("TileSetAtlasSource_vk6bx")
+sources/4 = SubResource("TileSetAtlasSource_vbv3y")
+sources/5 = SubResource("TileSetAtlasSource_032hv")
+sources/6 = SubResource("TileSetAtlasSource_45tq0")
+sources/7 = SubResource("TileSetAtlasSource_d03lk")
+sources/8 = SubResource("TileSetAtlasSource_oicy0")
+sources/9 = SubResource("TileSetAtlasSource_f0vs0")
+sources/10 = SubResource("TileSetAtlasSource_vxfwu")
+sources/11 = SubResource("TileSetAtlasSource_q2rcp")
+sources/12 = SubResource("TileSetAtlasSource_3wlio")
+sources/13 = SubResource("TileSetAtlasSource_xneo2")
+sources/14 = SubResource("TileSetAtlasSource_7ex57")
+sources/15 = SubResource("TileSetAtlasSource_ekuc8")
+sources/16 = SubResource("TileSetAtlasSource_clblh")
+sources/17 = SubResource("TileSetAtlasSource_hds2t")
+sources/18 = SubResource("TileSetAtlasSource_w7oju")
+sources/19 = SubResource("TileSetAtlasSource_cc0fi")

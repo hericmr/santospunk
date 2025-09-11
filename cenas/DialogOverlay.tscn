@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://c52bfofl16dod"]
+[gd_scene load_steps=7 format=3 uid="uid://c52bfofl16dod"]
 
 [ext_resource type="Script" uid="uid://b4hl2nkd3howv" path="res://scripts/DialogOverlay.gd" id="1_pq5m8"]
-[ext_resource type="Texture2D" uid="uid://dkaagysdi2mrs" path="res://artes/parede_poster.png" id="2_gnw01"]
-[ext_resource type="Texture2D" uid="uid://ddcnhqth2b8ps" path="res://artes/heric_rosto.png" id="3_gnw01"]
+[ext_resource type="Texture2D" uid="uid://cxcll8wejfqo3" path="res://artes/parede_poster.png" id="2_gnw01"]
+[ext_resource type="Texture2D" uid="uid://dljvcyisk7qy4" path="res://artes/heric_rosto.png" id="3_gnw01"]
+[ext_resource type="TileSet" uid="uid://ctlw5uvwmnhlp" path="res://new_tile_set.tres" id="4_eg1wm"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_gnw01"]
 blend_mode = 3
@@ -90,3 +91,6 @@ horizontal_alignment = 1
 layout_mode = 2
 button_group = SubResource("ButtonGroup_gnw01")
 text = "Aperte Esc ou clique aqui para Fechar"
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Root/Panel"]
+tile_set = ExtResource("4_eg1wm")
