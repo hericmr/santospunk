@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1v8ac2f1urww"]
+
+[ext_resource type="Script" uid="uid://ndycerpjvkut" path="res://cenas/historia.gd" id="1_newscript"]
+[ext_resource type="VideoStream" uid="uid://dy4mo2a12p48c" path="res://assets/historia.ogv" id="2_oldvideo"]
+
+[node name="VideoPlayer" type="Node2D"]
+script = ExtResource("1_newscript")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+custom_minimum_size = Vector2(1, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -427.0
+offset_top = -240.0
+offset_right = 427.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_oldvideo")
+volume_db = 14.85
+autoplay = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.75, 0.75)
