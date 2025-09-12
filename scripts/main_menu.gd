@@ -11,8 +11,7 @@ func reset_focus():
 	$VBoxContainer/Start.grab_focus()
 
 func _on_start_pressed():
-	get_tree().change_scene_to_file("res://cenas/Game.tscn")
-	AudioManager.play_music_sound()
+	get_tree().change_scene_to_file("res://cenas/historia.tscn")
 
 func _on_option_pressed():
 	option_menu.show()
