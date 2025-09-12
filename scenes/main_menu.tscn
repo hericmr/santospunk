@@ -369,6 +369,7 @@ libraries = {
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_tbmy8")
+volume_db = 2.972
 autoplay = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
