@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://cdqs8v0lwkdm4"]
+
+[ext_resource type="Texture2D" uid="uid://fv3dqc7i38uc" path="res://assets/artes/tia ana frame1.png" id="1_j3ldf"]
+[ext_resource type="Texture2D" uid="uid://d0frmndefo1mc" path="res://assets/artes/tia ana frame 2.png" id="2_rtvx2"]
+[ext_resource type="Script" uid="uid://bmerny1kqxdn" path="res://scripts/TiaAna.gd" id="3_script"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jcylu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_j3ldf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_j3ldf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_j3ldf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_rtvx2")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.0
+}]
+
+[node name="TiaAna" type="Area2D"]
+script = ExtResource("3_script")
+
+[node name="tiana" type="AnimatedSprite2D" parent="."]
+position = Vector2(81.2499, 36.1111)
+scale = Vector2(0.29594, 0.315812)
+sprite_frames = SubResource("SpriteFrames_jcylu")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(50, 29, 49, 15, 49, -3, 60, -25, 77, -31, 92, -23, 100, -9, 102, 8, 97, 19, 97, 30, 100, 36, 110, 36, 145, 64, 145, 75, 142, 79, 109, 81, 106, 84, 101, 98, 100, 112, 40, 113, 39, 109, 28, 110, 23, 104, 24, 89, 33, 57, 51, 34)

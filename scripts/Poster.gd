@@ -10,34 +10,43 @@ var _player_ref: Node2D = null
 var _indicator_label: Label = null
 
 func _ready():
+	print("Poster ready")
 	connect("body_entered", Callable(self, "_on_body_entered"))
 	connect("body_exited", Callable(self, "_on_body_exited"))
 	_ensure_interact_action()
 
 func _on_body_entered(body):
+	print("Body entered poster area: ", body.name)
 	if not body:
 		return
 	if body.name != "Player":
 		return
+	print("Player entered poster area")
 	_player_inside = true
 	_player_ref = body
 	_show_indicator()
 
 func _on_body_exited(body):
+	print("Body exited poster area: ", body.name)
 	if body and body == _player_ref:
+		print("Player exited poster area")
 		_player_inside = false
 		_player_ref = null
 		_hide_indicator()
 
 func _process(_delta):
 	if _player_inside:
+		print("Player inside poster area, waiting for input")
 		if Input.is_action_just_pressed("interact") or Input.is_action_just_pressed("ui_accept"):
+			print("Interact pressed, showing dialog")
 			_hide_indicator()
 			_show_dialog()
 
 func _show_dialog():
+	print("Showing dialog")
 	var dialog_scene: PackedScene = load("res://cenas/DialogOverlay.tscn")
 	if dialog_scene == null:
+		print("DialogOverlay.tscn not found")
 		return
 	var overlay = dialog_scene.instantiate()
 	# Passa dados para o overlay
@@ -56,6 +65,7 @@ func _show_dialog():
 
 func _show_indicator():
 	if _indicator_label == null and _player_ref:
+		print("Showing poster indicator")
 		_indicator_label = Label.new()
 		_indicator_label.text = "!"
 		_indicator_label.add_theme_color_override("font_color", Color(1, 1, 0))
@@ -65,6 +75,7 @@ func _show_indicator():
 
 func _hide_indicator():
 	if _indicator_label and is_instance_valid(_indicator_label):
+		print("Hiding poster indicator")
 		_indicator_label.queue_free()
 		_indicator_label = null
 

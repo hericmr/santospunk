@@ -1,20 +1,22 @@
-[gd_scene load_steps=25 format=3 uid="uid://b4fvjg6heglmq"]
+[gd_scene load_steps=28 format=3 uid="uid://c81stc3douhvd"]
 
-[ext_resource type="Texture2D" uid="uid://bv1qu86tf8mnr" path="res://artes/unnamed.png" id="1"]
-[ext_resource type="Texture2D" uid="uid://bcl4pdhmcbtl8" path="res://artes/Free Industrial Zone Tileset(1)/2 Background/3.png" id="1_yyih5"]
+[ext_resource type="Texture2D" uid="uid://0gdx3kelwikf" path="res://artes/unnamed.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://b8oumht7bmao5" path="res://artes/Free Industrial Zone Tileset(1)/2 Background/3.png" id="1_yyih5"]
 [ext_resource type="PackedScene" uid="uid://c0ybmjtnpdr1a" path="res://cenas/Player.tscn" id="2"]
-[ext_resource type="Texture2D" uid="uid://8bgvxv6ddawl" path="res://artes/degrade.png" id="2_joorw"]
-[ext_resource type="Texture2D" uid="uid://ci8t467ed8v1y" path="res://artes/Free Industrial Zone Tileset(1)/2 Background/4.png" id="2_qjyg3"]
-[ext_resource type="Texture2D" uid="uid://cjolaeyve5ghx" path="res://artes/Free Industrial Zone Tileset(1)/2 Background/5.png" id="3_elkpi"]
-[ext_resource type="Texture2D" uid="uid://culolyrgbydjk" path="res://artes/Free Industrial Zone Tileset(1)/1 Tiles/IndustrialTile_09.png" id="4_gwjdr"]
-[ext_resource type="Texture2D" uid="uid://ciakv46th8c3c" path="res://artes/free-scrolling-city-backgrounds-pixel-art/1 Backgrounds/1/Day/5.png" id="4_lvtmh"]
+[ext_resource type="Texture2D" uid="uid://div6dopjcxthe" path="res://artes/degrade.png" id="2_joorw"]
+[ext_resource type="Texture2D" uid="uid://b12i8iqrkg1ft" path="res://artes/Free Industrial Zone Tileset(1)/2 Background/4.png" id="2_qjyg3"]
+[ext_resource type="Texture2D" uid="uid://dwmm0f3hav4rf" path="res://artes/Free Industrial Zone Tileset(1)/2 Background/5.png" id="3_elkpi"]
+[ext_resource type="Texture2D" uid="uid://b6wia6cole3iq" path="res://artes/Free Industrial Zone Tileset(1)/1 Tiles/IndustrialTile_09.png" id="4_gwjdr"]
+[ext_resource type="Texture2D" uid="uid://dbg1km5tc77wh" path="res://artes/free-scrolling-city-backgrounds-pixel-art/1 Backgrounds/1/Day/5.png" id="4_lvtmh"]
 [ext_resource type="PackedScene" uid="uid://dokwajyxd77a4" path="res://cenas/Poster.tscn" id="4_t88pq"]
-[ext_resource type="Texture2D" uid="uid://bs8hj34ihpqfx" path="res://artes/DystopianCity/PNG/1.png" id="5_r0x5m"]
-[ext_resource type="Texture2D" uid="uid://ck2fgqdty2lbp" path="res://artes/DystopianCity/PNG/0.png" id="5_t88pq"]
-[ext_resource type="Texture2D" uid="uid://dygbss8vn2ji5" path="res://artes/DystopianCity/PNG/4.png" id="7_3mrqo"]
-[ext_resource type="Texture2D" uid="uid://ciulk50e04rwi" path="res://artes/tiaana.png" id="9_2vekm"]
-[ext_resource type="Texture2D" uid="uid://l1425ov6is6x" path="res://artes/free-scrolling-city-backgrounds-pixel-art/1 Backgrounds/2/Day/2.png" id="15_jfj1b"]
-[ext_resource type="Texture2D" uid="uid://uctfwdhh6kv6" path="res://artes/free-scrolling-city-backgrounds-pixel-art/1 Backgrounds/2/Day/3.png" id="16_0oim2"]
+[ext_resource type="Texture2D" uid="uid://c8nxiov1o6f08" path="res://artes/DystopianCity/PNG/1.png" id="5_r0x5m"]
+[ext_resource type="Texture2D" uid="uid://day3gigseruq5" path="res://artes/DystopianCity/PNG/0.png" id="5_t88pq"]
+[ext_resource type="Texture2D" uid="uid://3mvhknmuf3h" path="res://artes/DystopianCity/PNG/4.png" id="7_3mrqo"]
+[ext_resource type="Texture2D" uid="uid://blkhrhc4whak5" path="res://artes/tiaana.png" id="9_2vekm"]
+[ext_resource type="Texture2D" uid="uid://dmmeyxls4u1b5" path="res://artes/free-scrolling-city-backgrounds-pixel-art/1 Backgrounds/2/Day/2.png" id="15_jfj1b"]
+[ext_resource type="Texture2D" uid="uid://lg6rdjuvba62" path="res://artes/free-scrolling-city-backgrounds-pixel-art/1 Backgrounds/2/Day/3.png" id="16_0oim2"]
+[ext_resource type="Script" uid="uid://dxkwb248e53j8" path="res://scripts/BarEntrance.gd" id="17_g2l4x"]
+[ext_resource type="AudioStream" uid="uid://b6s42p2kthdt0" path="res://assets/audio/03 - Rainha Das Trevas.mp3" id="17_jfj1b"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(4964.25, 99)
@@ -62,6 +64,9 @@ scale_min = 1.5
 scale_max = 1.5
 color = Color(0.572549, 1, 1, 1)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1pbjv"]
+size = Vector2(41.7012, 27.3963)
+
 [node name="Game" type="Node2D"]
 
 [node name="4" type="Sprite2D" parent="."]
@@ -105,8 +110,8 @@ texture = ExtResource("2_joorw")
 
 [node name="poste" type="Sprite2D" parent="Unnamed"]
 z_index = -5
-position = Vector2(1149.23, -108.334)
-scale = Vector2(2.61167, 1.95003)
+position = Vector2(1223.5, -133.759)
+scale = Vector2(2.81859, 2.10453)
 texture = ExtResource("4_lvtmh")
 
 [node name="poster" parent="." instance=ExtResource("4_t88pq")]
@@ -127,7 +132,7 @@ scale = Vector2(1.10851, 1.22073)
 visible = false
 position = Vector2(429.405, -23.7563)
 scale = Vector2(0.902112, 0.819182)
-zoom = Vector2(0.61, 0.57)
+zoom = Vector2(0.705, 0.659)
 position_smoothing_enabled = true
 position_smoothing_speed = 2.0
 drag_horizontal_offset = -1.0
@@ -232,7 +237,7 @@ position = Vector2(-208.117, -29.4606)
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Sprite2D"]
 z_index = -3
-position = Vector2(1387.91, -2.67936)
+position = Vector2(1454.55, -9.82432)
 scale = Vector2(0.602092, 0.42858)
 skew = 0.0691025
 sprite_frames = SubResource("SpriteFrames_gwjdr")
@@ -242,8 +247,8 @@ frame_progress = 0.0303752
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
 z_index = -5
-position = Vector2(1508.11, 3.57248)
-scale = Vector2(0.260366, 0.235794)
+position = Vector2(1479.59, 68.9935)
+scale = Vector2(0.145748, 0.175862)
 skew = 0.0316433
 sprite_frames = SubResource("SpriteFrames_gwjdr")
 animation = &"new_animation"
@@ -274,12 +279,26 @@ texture = ExtResource("7_3mrqo")
 
 [node name="2" type="Sprite2D" parent="."]
 z_index = -15
-position = Vector2(1747, 26)
+position = Vector2(2052, -40)
+scale = Vector2(1.04861, 1.04861)
 texture = ExtResource("15_jfj1b")
 
 [node name="3" type="Sprite2D" parent="."]
 z_index = -6
-position = Vector2(1756, -3)
+position = Vector2(861, -31)
 texture = ExtResource("16_0oim2")
 
 [node name="Sprite2D" type="Sprite2D" parent="3"]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("17_g2l4x")
+
+[node name="portadobar" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1841.87, 78.4937)
+scale = Vector2(1.205, 1.205)
+shape = SubResource("RectangleShape2D_1pbjv")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("17_jfj1b")
+volume_db = -0.05
+autoplay = true

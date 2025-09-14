@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://cdeuhtx4bvo0g"]
+[gd_scene load_steps=11 format=3 uid="uid://cdeuhtx4bvo0g"]
 
 [ext_resource type="Script" uid="uid://b1jy2kpjkp38a" path="res://cenas/splash.gd" id="1_7tc72"]
-[ext_resource type="Texture2D" uid="uid://cel6anf41u8oi" path="res://artes/index.png" id="2_t0076"]
-[ext_resource type="Texture2D" uid="uid://ck2chrg4xf6b" path="res://artes/TituloLogo.png" id="3_7tc72"]
-[ext_resource type="Texture2D" uid="uid://cwlqydn76vrx2" path="res://artes/real_lion_logo.png" id="4_j1d14"]
-[ext_resource type="Texture2D" uid="uid://bepvycepx3wno" path="res://artes/SubtituloLogo.png" id="5_dv2m2"]
+[ext_resource type="Texture2D" uid="uid://d1qsnhubbhwhq" path="res://artes/index.png" id="2_t0076"]
+[ext_resource type="Texture2D" uid="uid://c2cvnpnnkv7hl" path="res://artes/TituloLogo.png" id="3_7tc72"]
+[ext_resource type="Texture2D" uid="uid://b75no0vn3y0xw" path="res://artes/real_lion_logo.png" id="4_j1d14"]
+[ext_resource type="Texture2D" uid="uid://di607gff0jwkb" path="res://artes/SubtituloLogo.png" id="5_dv2m2"]
+[ext_resource type="AudioStream" uid="uid://cbbog2b8th57o" path="res://assets/audio/02 - Punk.mp3" id="6_ej75e"]
 
 [sub_resource type="Animation" id="Animation_t0076"]
 length = 7.0
@@ -101,5 +102,10 @@ expand_mode = 3
 libraries = {
 &"": SubResource("AnimationLibrary_ej75e")
 }
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_ej75e")
+volume_db = 0.001
+autoplay = true
 
 [connection signal="animation_finished" from="FadeLogo" to="." method="_on_fade_logo_animation_finished"]

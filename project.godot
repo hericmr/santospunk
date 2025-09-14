@@ -27,6 +27,7 @@ buses/default_bus_layout="res://assets/default_bus_layout.tres"
 
 Utilities="*res://scenes/utilities.tscn"
 AudioManager="*res://scenes/audio_manager.tscn"
+DialogHelper="*res://scripts/DialogHelper.gd"
 
 [display]
 
