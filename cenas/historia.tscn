@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c1v8ac2f1urww"]
 
 [ext_resource type="Script" uid="uid://ndycerpjvkut" path="res://cenas/historia.gd" id="1_newscript"]
-[ext_resource type="VideoStream" uid="uid://dy4mo2a12p48c" path="res://assets/historia.ogv" id="2_oldvideo"]
+[ext_resource type="VideoStream" path="res://assets/historia.ogv" id="2_oldvideo"]
 
 [node name="VideoPlayer" type="Node2D"]
 script = ExtResource("1_newscript")

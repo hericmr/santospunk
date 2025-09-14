@@ -97,7 +97,7 @@ texture = ExtResource("1")
 
 [node name="Sprite2D" type="Sprite2D" parent="Unnamed"]
 z_index = -303
-position = Vector2(791.228, 3.31531)
+position = Vector2(402.943, -264.2)
 scale = Vector2(61.6861, 1.00639)
 texture = ExtResource("2_joorw")
 
@@ -141,6 +141,13 @@ drag_left_margin = 0.0
 drag_top_margin = 0.0
 drag_right_margin = 1.0
 drag_bottom_margin = 1.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Player"]
+position = Vector2(997.736, 100.759)
+scale = Vector2(0.902112, 0.819182)
+stream = ExtResource("17_jfj1b")
+volume_db = -0.05
+autoplay = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -297,8 +304,3 @@ script = ExtResource("17_g2l4x")
 position = Vector2(1841.87, 78.4937)
 scale = Vector2(1.205, 1.205)
 shape = SubResource("RectangleShape2D_1pbjv")
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("17_jfj1b")
-volume_db = -0.05
-autoplay = true

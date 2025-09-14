@@ -1,17 +1,16 @@
-[gd_scene load_steps=20 format=3 uid="uid://c3mf021ylmjy7"]
+[gd_scene load_steps=19 format=3 uid="uid://c3mf021ylmjy7"]
 
 [ext_resource type="Texture2D" uid="uid://blkhrhc4whak5" path="res://artes/tiaana.png" id="1_0v3jw"]
 [ext_resource type="Texture2D" uid="uid://ykcmtckc25n2" path="res://assets/artes/Screenshot_2025-09-14_12-38-26.png" id="1_euymv"]
 [ext_resource type="Script" uid="uid://ddyaiuxmv4ugd" path="res://scripts/BarScene.gd" id="1_script"]
 [ext_resource type="Texture2D" uid="uid://dmuh0vl2r4f78" path="res://assets/artes/Screenshot_2025-09-14_12-42-20.png" id="2_1miuw"]
-
 [ext_resource type="Script" uid="uid://doefxjm2yoxah" path="res://scripts/BarInteractiveSetup.gd" id="3_setup"]
 [ext_resource type="PackedScene" uid="uid://cdqs8v0lwkdm4" path="res://tia_ana.tscn" id="4_ko5o2"]
 [ext_resource type="Texture2D" uid="uid://dcjwcc82ffgo2" path="res://assets/artes/bardatiasprites.png" id="5_f8chx"]
 [ext_resource type="Texture2D" uid="uid://018adkueiqao" path="res://assets/artes/hanging-terminal.png" id="6_ko5o2"]
 [ext_resource type="Texture2D" uid="uid://cyvhmiybqqv8x" path="res://assets/artes/brunoposter2.png" id="7_euymv"]
-[ext_resource type="AudioStream" uid="uid://btjtdguejm4hx" path="res://artes/witch.mp3" id="7_ko5o2"]
 [ext_resource type="Texture2D" uid="uid://cbeoystsq67nw" path="res://assets/artes/notebook.png" id="8_euymv"]
+[ext_resource type="AudioStream" uid="uid://bqixuc6uvf3qi" path="res://assets/audio/05 - Piercing No Umbigo (Lili Carabina).mp3" id="10_f8chx"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_dqp57"]
 
@@ -73,8 +72,6 @@ animations = [{
 [node name="BarDaTiaAna" type="Node2D"]
 script = ExtResource("1_script")
 
-
-
 [node name="BarInteractiveSetup" type="Node2D" parent="."]
 script = ExtResource("3_setup")
 
@@ -115,8 +112,8 @@ scale = Vector2(2.33594, 2.4928)
 
 [node name="AudioListener2D" type="AudioListener2D" parent="."]
 
-[node name="Witch" type="AudioStreamPlayer" parent="AudioListener2D"]
-stream = ExtResource("7_ko5o2")
+[node name="05-PiercingNoUmbigo(liliCarabina)" type="AudioStreamPlayer" parent="AudioListener2D"]
+stream = ExtResource("10_f8chx")
 autoplay = true
 
 [node name="Notebook" type="Sprite2D" parent="."]
