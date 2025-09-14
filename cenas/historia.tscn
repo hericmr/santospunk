@@ -24,4 +24,4 @@ volume_db = 14.85
 autoplay = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.75, 0.75)
+zoom = Vector2(0.39, 0.39)

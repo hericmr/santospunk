@@ -33,6 +33,12 @@ func _process(_delta):
 		print("Player inside, waiting for input")
 		if Input.is_action_just_pressed("ui_accept"):
 			print("Space pressed, changing scene to bar_da_tia_ana.tscn")
+			# Save player's position before changing scene
+			if _player_ref:
+				Utilities.config.set_value("Player", "last_game_position_x", _player_ref.global_position.x)
+				Utilities.config.set_value("Player", "last_game_position_y", _player_ref.global_position.y)
+				Utilities.save_data()
+				print("Player position saved: ", _player_ref.global_position)
 			get_tree().change_scene_to_file("res://cenas/bar_da_tia_ana.tscn")
 
 func _show_indicator():

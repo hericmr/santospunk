@@ -12,6 +12,20 @@ func _ready():
 	# Conectar os sinais das áreas de transição
 	_connect_transition_areas()
 
+	# Load player position if available
+	if Utilities.config.has_section("Player"):
+		var saved_x = Utilities.config.get_value("Player", "last_game_position_x", -1)
+		var saved_y = Utilities.config.get_value("Player", "last_game_position_y", -1)
+
+		if saved_x != -1 and saved_y != -1:
+			var player_node = find_child("Player")
+			if player_node:
+				player_node.global_position = Vector2(saved_x, saved_y)
+				print("Player position loaded: ", player_node.global_position)
+				# Clear saved position after loading
+				Utilities.config.erase_section("Player")
+				Utilities.save_data()
+
 func _connect_transition_areas():
 	# Conectar cada área de transição
 	var transition_areas = [
